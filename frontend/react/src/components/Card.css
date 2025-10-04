@@ -1,0 +1,45 @@
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-container {
+    border-radius: 10px;
+    overflow: hidden;
+
+    background-color: #2c2c2c;
+
+    height: 320px;
+    position: relative;
+}
+
+.card-image-area {
+    height: 60%;
+    background-color: red;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-content {
+    padding: 15px;
+    color: white;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.view-tag {
+    position: absolute;
+    bottom: 40%;
+    right: 15px;
+
+    background-color: white;
+    color: black;
+    padding: 8px 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}

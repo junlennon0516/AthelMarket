@@ -6,6 +6,8 @@ import HeroSection from './components/HeroSection'
 import DDayCounter from './components/DDayCounter';
 import Card from './components/Card'; 
 import Menu from './components/Menu';
+import Map from './components/Map'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -18,12 +20,35 @@ function App() {
 
       {/* 하단 카드 영역 */}
       <div className='content-cards'>
-        <Card />
-        <Card />
-        <Card />
+        <Card 
+          title="에셀 소개"
+          description="에셀 마켓의 의미"
+          imageUrl="/assets/jik.jpg" 
+          linkTo="/Header"
+        />
+        <Card 
+          title="에셀 소개"
+          description="에셀 마켓의 의미"
+          imageUrl="/assets/jik.jpg" 
+          linkTo="/Header"
+        />
+        <Card 
+          title="부스"
+          description="에셀 마켓의 의미"
+          imageUrl="/assets/jik.jpg" 
+          linkTo="/Header"
+        />
+        <Card 
+          title="에셀 소개"
+          description="에셀 마켓의 의미"
+          imageUrl="/assets/jik.jpg" 
+          linkTo="/Header"
+        />
       </div>
 
       <Menu />
+      <Map />
+      <Footer />
     </div>
   );
 }

@@ -22,3 +22,12 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+
+.content-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    padding: 20px;
+}
