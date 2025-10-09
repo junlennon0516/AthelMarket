@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import './App.css';
 import React from 'react'
 import Header from './components/Header'
@@ -8,48 +9,77 @@ import Card from './components/Card';
 import Menu from './components/Menu';
 import Map from './components/Map'
 import Footer from './components/Footer'
+import Vision from './components/Vision'
+import History from './components/History'
+import Booth from './components/Booth'
+import QandA from './components/QandA'
 
-function App() {
+import jikImage from './assets/image.jpg';
+
+// 홈 컴포넌트
+function Home() {
+  // 메뉴 열림/닫힘 상태 관리
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(prev => !prev);
+  }
+
   return (
     <div className='app-container'>
       {/* 헤더 영역 */}
-      <Header />
+      <Header onMenuToggle={toggleMenu} />
 
-    {/* 메인 타이틀 & D-Day 영역*/}
+      {/* 메인 타이틀 & D-Day 영역*/}
       <HeroSection />
 
       {/* 하단 카드 영역 */}
       <div className='content-cards'>
         <Card 
-          title="에셀 소개"
-          description="에셀 마켓의 의미"
-          imageUrl="/assets/jik.jpg" 
-          linkTo="/Header"
+          title="에셀 비전"
+          description="비전"
+          imageUrl={jikImage}
+          linkTo="/vision"
         />
         <Card 
-          title="에셀 소개"
-          description="에셀 마켓의 의미"
-          imageUrl="/assets/jik.jpg" 
-          linkTo="/Header"
+          title="지난 에셀 마켓"
+          description="지난 에셀 마켓의 기록"
+          imageUrl={jikImage}
+          linkTo="/history"
         />
         <Card 
-          title="부스"
-          description="에셀 마켓의 의미"
-          imageUrl="/assets/jik.jpg" 
-          linkTo="/Header"
+          title="부스 안내"
+          description="다양한 부스 정보"
+          imageUrl={jikImage}
+          linkTo="/booth"
         />
         <Card 
-          title="에셀 소개"
-          description="에셀 마켓의 의미"
-          imageUrl="/assets/jik.jpg" 
-          linkTo="/Header"
+          title="Q&A"
+          description="자주 묻는 질문"
+          imageUrl={jikImage}
+          linkTo="/qanda"
         />
       </div>
 
-      <Menu />
+      <Menu 
+        isOpen = {isMenuOpen}
+        onClose = {toggleMenu}
+      />
       <Map />
       <Footer />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/vision" element={<Vision />} />
+      <Route path="/history" element={<History />} />
+      <Route path="/booth" element={<Booth />} />
+      <Route path="/qanda" element={<QandA />} />
+    </Routes>
   );
 }
 

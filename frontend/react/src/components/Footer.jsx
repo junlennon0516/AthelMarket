@@ -1,11 +1,12 @@
 import React from "react";
 import './Footer.css';
+import sfgcLogo from '../assets/sfgc-logo.png';
 
 function Footer() {
     return (
         <footer className="footer-container">
             <div className="footer-logo-area">
-                <img src="/hanwha-logo.png" alt="Hanwha Logo" className="footer-logo" />
+                <img src={sfgcLogo} alt="SFGC Logo" className="footer-logo" />
             </div>
 
             <hr className="footer-divider" />

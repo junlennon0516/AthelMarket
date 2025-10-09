@@ -13,7 +13,7 @@ function Card({ title, description, imageUrl, linkTo}) {
                     <p className="card-description">{description}</p>
                 </div>
                 
-                <span className="view-tag">VIEW</span>
+                {/*<span className="view-tag">CLICK</span>*/}
             </div>
         </Link>
     );

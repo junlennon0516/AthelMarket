@@ -7,11 +7,14 @@ function HeroSection() {
         <section className="hero-section">
             {/* 메인 타이틀 영역 */}
             <div className="hero-text-content">
+                <p className="sub-title">
+                    제 4차
+                </p>
                 <h1 className="main-title">
-                    Ethel Market
+                     에셀 마켓
                 </h1>
                 <p className="date-location">
-                    2025.10.25
+                    2025.10.25(토)
                 </p>
             </div>
             

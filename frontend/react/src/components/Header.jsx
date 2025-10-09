@@ -1,16 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import './Header.css';
 
-function Header() {
+function Header({ onMenuToggle }) {
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollTop = window.scrollY;
+            setIsScrolled(scrollTop > 50);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return (
-      <div className="header-container">
+      <div className={`header-container ${isScrolled ? 'scrolled' : ''}`}>
         <div className="header-left">
             <span className="title">
                 Ethel Market
             </span>
         </div>
-        <div className="heder-right">
-            <div className="menu-icon">
+        <div className="header-right">
+            <div className="menu-icon" onClick={onMenuToggle}>
                 <div className="bar"></div>
                 <div className="bar"></div>
                 <div className="bar"></div>
