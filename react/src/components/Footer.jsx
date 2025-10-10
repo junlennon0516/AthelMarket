@@ -16,10 +16,10 @@ function Footer() {
                     Copyright © 2025 시흥순복음교회. All Rights Reserved.
                 </p>
                 <p className="footer-text">
-                    문의: 
+                    문의: T.031-317-5017
                 </p>
                 <p className="footer-text noto-sans-kr-regular">
-                    경기 시흥시 장현순환로 51 / 경기 시흥시 장현동 357-6 에셀센터
+                    경기도 시흥시 시청로 78 시흥순복음교회
                 </p>
             </div>
         </footer>
