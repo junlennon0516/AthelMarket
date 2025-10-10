@@ -36,14 +36,6 @@ function Home() {
       {/* 메인 타이틀 & D-Day 영역*/}
       <HeroSection />
 
-      {/* 에셀 마켓 안내 버튼 */}
-      <div className="market-info-button-container">
-        <Link to="/marketfour" className="market-info-button">
-          <span className="button-text noto-sans-kr-bold">제 4차 에셀 마켓 안내</span>
-          <span className="button-text-click noto-sans-kr-bold"> click</span>
-        </Link>
-      </div>
-
       {/* 하단 카드 영역 */}
       <div className='content-cards'>
         <Card 
