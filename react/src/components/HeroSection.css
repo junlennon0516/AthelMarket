@@ -1,0 +1,101 @@
+.hero-section {
+    background-image: url('../assets/image.jpg');
+    background-size: cover;
+    background-position: center bottom;
+
+    background-color: rgba(255, 255, 255, 0.3);
+    background-blend-mode: overlay;
+
+    background-image: 
+        linear-gradient(to bottom, 
+            rgba(255, 255, 255, 0.2) 30%,    
+            rgba(0, 0, 0, 0.3) 80%,
+            rgba(0, 0, 0, 0.6) 100%),
+        url('../assets/image.jpg');
+
+    min-height: 60vh;
+    padding: 80px 16px 30px 16px; 
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center; 
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.hero-text-content {
+    margin-top: 50px;
+    width: 100%;
+    text-align: left;
+}
+
+.main-title {
+    font-size: 35px;
+    font-weight: 900;
+    margin: 0 0 10px 0;
+    line-height: 1.1;
+    color: black;
+}
+
+.sub-title {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.date-location {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: black;
+}
+
+.dday-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    align-items: center; 
+    margin-top: 16px;
+    color: black;
+}
+
+.dday-label {
+    /*D-day 레이블을 왼쪽 정렬 */
+    align-self: flex-start; 
+    margin-left: clamp(8px, 2vw, 16px);
+
+    font-size: 15px;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+@media (min-width: 640px) {
+    .hero-section {
+        padding: 100px 20px 40px 20px;
+        min-height: 70vh;
+    }
+    .main-title {
+        font-size: 48px;
+    }
+    .date-location {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero-section {
+        padding: 120px 24px 50px 24px;
+        min-height: 75vh;
+    }
+    .main-title {
+        font-size: 56px;
+    }
+    .date-location {
+        font-size: 24px;
+    }
+}

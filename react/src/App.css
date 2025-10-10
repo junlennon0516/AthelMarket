@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box; 
+}
+
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
+body {
+    margin: 0;
+    background-color: white;
+    color: black;
+    overflow-x: hidden;
+}
+
+.app-container { 
+    margin: 0 auto;
+    width: 100%;
+    overflow-x: clip;
+
+    background-color: white;
+    background-size: cover;
+    background-position: top center;
+    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 15px;
+
+    padding: 20px;
+}
+
+/* 반응형 간격만 단계적으로 확장 */
+@media (min-width: 768px) {
+    .content-cards {
+        gap: 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .content-cards {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .content-cards {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 22px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .content-cards {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 22px;
+    }
+}

@@ -1,0 +1,50 @@
+.dday-counter-container {
+    display: flex;
+    gap: clamp(8px, 2vw, 16px);
+    flex-wrap: nowrap; 
+    justify-content: center;
+    align-items: center;
+    
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 100%;
+    
+    padding: 0 clamp(8px, 2vw, 16px);
+}
+
+.time-block {
+    background-color: #2b2b2b;
+    border-radius: 8px;
+
+    width: clamp(90px, 18vw, 160px);
+    height: clamp(100px, 16vw, 150px);
+    flex: 1 1 0; 
+
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time-value {
+    font-size: clamp(40px, 12vw, 72px); 
+    
+    color: white;
+    line-height: 1;
+
+    
+    font-family: "DM Serif Text", serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.separator {
+    font-size: clamp(40px, 8vw, 64px);
+    font-weight: 700;
+    color: white;
+    
+    align-self: center; 
+    margin: 0 4px;
+}

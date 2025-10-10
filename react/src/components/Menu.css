@@ -1,0 +1,79 @@
+.menu-overlay {
+    position: fixed;
+    inset: 0; /* top:0; right:0; bottom:0; left:0; */
+    width: 100vw;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.7);
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1000;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.menu-overlay.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: min(500px, 70vw);
+    height: 100%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    color: white;
+
+    transform: translateX(100%);
+    transition: transform 0.3s ease-out;
+}
+
+.menu-overlay.open .menu-panel {
+    transform: translateX(0);
+}
+
+.close-button-link {
+    text-decoration: none;
+
+    position: absolute;
+    top: 10px;
+    right: 32px;
+}
+
+.close-button {
+    position: absolute;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+}
+
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 60px;
+}
+
+.menu-item {
+    background-color: #1a1a1a;
+    padding: 12px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: left;
+    text-decoration: none;
+    color: white;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: #2a2a2a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
