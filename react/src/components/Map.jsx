@@ -3,8 +3,6 @@ import { Map as KakaoMap, MapMarker } from "react-kakao-maps-sdk";
 import './Map.css';
 import './font.css';
 
-const {kakao} = window;
-
 function Map({ address }) {
   const [state, setState] = useState({
     // 지도의 초기 위치
@@ -21,15 +19,16 @@ function Map({ address }) {
   useEffect(() => {
     // kakao 객체가 로드되었는지 확인
     if (!window.kakao || !window.kakao.maps || !window.kakao.maps.services) {
+      console.log('Kakao Maps SDK가 로드되지 않았습니다.');
       return;
     }
 
     // 주소를 좌표로 변환하는 함수
-    const geocoder = new kakao.maps.services.Geocoder();
+    const geocoder = new window.kakao.maps.services.Geocoder();
     
     // 주소를 좌표로 변환하여 state에 저장
     const callback = function(result, status) {
-      if (status === kakao.maps.services.Status.OK) {
+      if (status === window.kakao.maps.services.Status.OK) {
         const newSearch = result[0];
         setState(prev => ({
           ...prev,
