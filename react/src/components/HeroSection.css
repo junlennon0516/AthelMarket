@@ -63,15 +63,25 @@
     color: black;
 }
 
-.dday-label {
+.dday-label-container {
     /*D-day 레이블을 왼쪽 정렬 */
     align-self: flex-start; 
     margin-left: clamp(8px, 2vw, 16px);
-
-    font-size: 15px;
-    letter-spacing: 5px;
     margin-bottom: 10px;
-    font-weight: 500;
+    
+    /* 배경색과 스타일 추가 */
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 6px 14px;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+}
+
+.dday-label {
+    font-size: 12px;
+    letter-spacing: 5px;
+    color: #333;
+    margin: 0;
 }
 
 @media (min-width: 640px) {

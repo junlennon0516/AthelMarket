@@ -21,7 +21,9 @@ function HeroSection() {
             
             {/* D-day 카운터 영역 */}
             <div className="dday-wrapper">
-                <p className="dday-label noto-sans-kr-bold">D-day</p>
+                <div className="dday-label-container">
+                    <p className="dday-label noto-sans-kr-bold">D-day</p>
+                </div>
                 <DDayCounter/>
             </div>
         </section>

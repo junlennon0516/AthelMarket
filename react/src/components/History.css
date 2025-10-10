@@ -123,14 +123,18 @@
 /* 이미지 컨테이너 */
 .history-image-container {
     position: relative;
-    height: 300px;
+    width: 100%;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .history-image {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
     transition: transform 0.3s ease;
 }
 
@@ -244,7 +248,11 @@
     }
     
     .history-image-container {
-        height: 250px;
+        /* 높이 제거 - 이미지에 맞춰 자동 조정 */
+    }
+    
+    .history-image {
+        max-height: 300px;
     }
     
     .history-text-container {

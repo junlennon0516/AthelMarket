@@ -13,6 +13,8 @@ import Vision from './components/Vision'
 import History from './components/History'
 import Booth from './components/Booth'
 import QandA from './components/QandA'
+import Plan from './components/Plan'
+import Church from './components/Church'
 
 import jikImage from './assets/image.jpg';
 
@@ -59,6 +61,18 @@ function Home() {
           imageUrl={jikImage}
           linkTo="/qanda"
         />
+        <Card 
+          title="교회 소개"
+          description="시흥순복음교회"
+          imageUrl={jikImage}
+          linkTo="/church"
+        />
+        <Card 
+          title="에셀 계획"
+          description="앞으로 에셀 마켓의 계획"
+          imageUrl={jikImage}
+          linkTo="/plan"
+        />
       </div>
 
       <Menu 
@@ -79,6 +93,8 @@ function App() {
       <Route path="/history" element={<History />} />
       <Route path="/booth" element={<Booth />} />
       <Route path="/qanda" element={<QandA />} />
+      <Route path="/church" element={<Church />} />
+      <Route path="/plan" element={<Plan />} />
     </Routes>
   );
 }
