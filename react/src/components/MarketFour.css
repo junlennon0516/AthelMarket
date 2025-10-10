@@ -1,12 +1,12 @@
-.qanda-container {
+.marketfour-container {
     min-height: 100vh;
-    background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     display: flex;
     flex-direction: column;
 }
 
 /* 헤더 스타일 */
-.qanda-header {
+.marketfour-header {
     position: fixed;
     top: 0;
     left: 0;
@@ -39,7 +39,7 @@
     transform: scale(1.05);
 }
 
-.qanda-header-title {
+.marketfour-header-title {
     font-size: 18px;
     color: #333;
     margin: 0;
@@ -52,7 +52,7 @@
 }
 
 /* 메인 콘텐츠 스타일 */
-.qanda-content {
+.marketfour-content {
     flex: 1;
     display: flex;
     align-items: center;
@@ -60,7 +60,7 @@
     padding: 100px 20px 40px 20px;
 }
 
-.qanda-text {
+.marketfour-text {
     background-color: white;
     border-radius: 16px;
     padding: 60px 40px;
@@ -70,81 +70,19 @@
     text-align: center;
 }
 
-.qanda-text h2 {
-    font-size: 32px;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.qanda-text p {
+.marketfour-text p {
     font-size: 18px;
     line-height: 1.6;
     color: #666;
-    margin-bottom: 30px;
-}
-
-.faq-section {
-    text-align: left;
-    margin-top: 30px;
-}
-
-.faq-item {
     margin-bottom: 15px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.faq-question {
-    width: 100%;
-    padding: 20px;
-    background-color: #f8f9fa;
-    border: none;
-    text-align: left;
-    font-size: 16px;
-    font-weight: 600;
-    color: #333;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background-color 0.3s ease;
-}
-
-.faq-question:hover {
-    background-color: #e9ecef;
-}
-
-.faq-icon {
-    font-size: 24px;
-    font-weight: bold;
-    transition: transform 0.3s ease;
-}
-
-.faq-icon.open {
-    transform: rotate(45deg);
-}
-
-.faq-answer {
-    padding: 20px;
-    background-color: white;
-    border-top: 1px solid #e9ecef;
-}
-
-.faq-answer p {
-    margin: 0;
-    font-size: 15px;
-    line-height: 1.5;
-    color: #666;
 }
 
 @media (max-width: 768px) {
-    .qanda-header {
+    .marketfour-header {
         padding: 12px 16px;
     }
     
-    .qanda-header-title {
+    .marketfour-header-title {
         font-size: 16px;
     }
     
@@ -157,32 +95,15 @@
         width: 36px;
     }
     
-    .qanda-content {
+    .marketfour-content {
         padding: 80px 20px 40px 20px;
     }
     
-    .qanda-text {
+    .marketfour-text {
         padding: 40px 20px;
     }
     
-    .qanda-text h2 {
-        font-size: 28px;
-    }
-    
-    .qanda-text p {
+    .marketfour-text p {
         font-size: 16px;
-    }
-    
-    .faq-question {
-        padding: 15px;
-        font-size: 15px;
-    }
-    
-    .faq-answer {
-        padding: 15px;
-    }
-    
-    .faq-answer p {
-        font-size: 14px;
     }
 }

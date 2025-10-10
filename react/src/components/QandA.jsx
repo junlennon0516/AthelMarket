@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './QandA.css';
+import './font.css';
 
 function QandA() {
     const [openFAQ, setOpenFAQ] = useState(null);
@@ -41,7 +42,7 @@ function QandA() {
                         <path d="M15.41 7.41L14 6L8 12L14 18L15.41 16.59L10.83 12L15.41 7.41Z" fill="currentColor"/>
                     </svg>
                 </Link>
-                <h1 className="qanda-header-title">Q&A</h1>
+                <h1 className="qanda-header-title noto-sans-kr-bold">Q&A</h1>
                 <div className="header-spacer"></div>
             </header>
 

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Link } from 'react-router-dom'
 import './App.css';
 import React from 'react'
 import Header from './components/Header'
@@ -15,6 +15,7 @@ import Booth from './components/Booth'
 import QandA from './components/QandA'
 import Plan from './components/Plan'
 import Church from './components/Church'
+import MarketFour from './components/MarketFour'
 
 import jikImage from './assets/image.jpg';
 
@@ -34,6 +35,14 @@ function Home() {
 
       {/* 메인 타이틀 & D-Day 영역*/}
       <HeroSection />
+
+      {/* 에셀 마켓 안내 버튼 */}
+      <div className="market-info-button-container">
+        <Link to="/marketfour" className="market-info-button">
+          <span className="button-text noto-sans-kr-bold">제 4차 에셀 마켓 안내</span>
+          <span className="button-text-click noto-sans-kr-bold"> click</span>
+        </Link>
+      </div>
 
       {/* 하단 카드 영역 */}
       <div className='content-cards'>
@@ -95,6 +104,7 @@ function App() {
       <Route path="/qanda" element={<QandA />} />
       <Route path="/church" element={<Church />} />
       <Route path="/plan" element={<Plan />} />
+      <Route path="/marketfour" element={<MarketFour />} />
     </Routes>
   );
 }
