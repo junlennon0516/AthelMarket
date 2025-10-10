@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import './Header.css';
+import './font.css';
 
 function Header({ onMenuToggle }) {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -17,8 +18,8 @@ function Header({ onMenuToggle }) {
     return (
       <div className={`header-container ${isScrolled ? 'scrolled' : ''}`}>
         <div className="header-left">
-            <span className="title">
-                Ethel Market
+            <span className="title noto-sans-kr-bold">
+                Athel Market
             </span>
         </div>
         <div className="header-right">

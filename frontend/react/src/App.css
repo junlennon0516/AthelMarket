@@ -8,9 +8,8 @@ html {
 }
 body {
     margin: 0;
-    font-family: 'Pretendard', sans-serif;
     background-color: white;
-    color: white;
+    color: black;
     overflow-x: hidden;
 }
 

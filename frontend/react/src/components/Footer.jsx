@@ -12,13 +12,13 @@ function Footer() {
             <hr className="footer-divider" />
             
             <div className="footer-info-area">
-                <p className="footer-text copyright">
+                <p className="footer-text copyright noto-sans-kr-medium">
                     Copyright © 2025 시흥순복음교회. All Rights Reserved.
                 </p>
                 <p className="footer-text">
                     문의: 
                 </p>
-                <p className="footer-text">
+                <p className="footer-text noto-sans-kr-regular">
                     경기 시흥시 장현순환로 51 / 경기 시흥시 장현동 357-6 에셀센터
                 </p>
             </div>

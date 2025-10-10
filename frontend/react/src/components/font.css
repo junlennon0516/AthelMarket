@@ -1,0 +1,26 @@
+.noto-sans-kr-bold {
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.noto-sans-kr-medium {
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.noto-sans-kr-regular {
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.dm-serif-text-bold {
+    font-family: "DM Serif Text", serif;
+    font-weight: 900;
+    font-style: normal;
+  }

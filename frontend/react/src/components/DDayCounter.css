@@ -30,10 +30,14 @@
 
 .time-value {
     font-size: clamp(40px, 12vw, 72px); 
-    font-weight: 700;
+    
     color: white;
-    font-family: 'Arial', sans-serif;
     line-height: 1;
+
+    
+    font-family: "DM Serif Text", serif;
+    font-weight: 900;
+    font-style: normal;
 }
 
 .separator {

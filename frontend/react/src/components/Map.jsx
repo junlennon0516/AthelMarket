@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Map as KakaoMap, MapMarker } from "react-kakao-maps-sdk";
 import './Map.css';
+import './font.css';
 
 const {kakao} = window;
 
@@ -45,13 +46,13 @@ function Map({ address }) {
   return (
     <div className="map-container">
       {/* 오시는 길 제목 */}
-      <div className="map-header">
+      <div className="map-header noto-sans-kr-bold">
           오시는 길
       </div>
       
       {/* 주소 정보 */}
-      <div className="map-address">
-        <div className="map-address-item">
+      <div className="map-address noto-sans-kr-medium">
+        <div className="map-address-item ">
           <strong>도로명주소:</strong> 경기 시흥시 장현순환로 51
         </div>
         <div>

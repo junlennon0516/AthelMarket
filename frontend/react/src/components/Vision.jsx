@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Vision.css';
+import './font.css';
 
 function Vision() {
     return (
@@ -12,7 +13,7 @@ function Vision() {
                         <path d="M15.41 7.41L14 6L8 12L14 18L15.41 16.59L10.83 12L15.41 7.41Z" fill="currentColor"/>
                     </svg>
                 </Link>
-                <h1 className="vision-header-title">에셀 비전</h1>
+                <h1 className="vision-header-title noto-sans-kr-bold">에셀 비전</h1>
                 <div className="header-spacer"></div>
             </header>
 
