@@ -34,20 +34,20 @@
     font-size: 40px;
     margin: 0 0 10px 0;
     line-height: 1.1;
-    color: #ffcd4a;
+    color: #fc5230;
 }
 
 .sub-title {
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 5px;
-    color: #ffcd4a;
+    color: #fc5230;
 }
 
 .date-location {
     font-size: 25px;
     margin-bottom: 70px;
-    color: #fc5230;
+    color: #ffcd4a;
 }
 
 .dday-wrapper {
