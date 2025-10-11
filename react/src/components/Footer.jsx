@@ -9,7 +9,7 @@ function Footer() {
                 <img src={sfgcLogo} alt="SFGC Logo" className="footer-logo" />
             </div>
 
-            <hr className="footer-divider" />
+            <hr className="footer-division" />
             
             <div className="footer-info-area">
                 <p className="footer-text copyright noto-sans-kr-medium">

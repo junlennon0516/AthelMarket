@@ -14,7 +14,7 @@
 }
 
 .time-block {
-    background-color: #2b2b2b;
+    background-color: #f3eee1;
     border-radius: 8px;
 
     width: clamp(90px, 18vw, 160px);
@@ -31,7 +31,7 @@
 .time-value {
     font-size: clamp(40px, 12vw, 72px); 
     
-    color: white;
+    color: #fc5230;
     line-height: 1;
 
     

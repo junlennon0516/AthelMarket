@@ -6,7 +6,7 @@
 }
 
 .map-header {
-    background-color: #007bff;
+    background: linear-gradient(135deg, #ffcd4a 0%, #fc5230 100%);
     border-radius: 12px;
     padding: 12px 20px;
     width: 120px;

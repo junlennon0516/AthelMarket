@@ -7,7 +7,7 @@
     border-radius: 10px;
     overflow: hidden;
 
-    background-color: #4da76b;
+    background-color: #ffffff;
 
     height: 320px;
     position: relative;
@@ -15,14 +15,14 @@
 
 .card-image-area {
     height: 60%;
-    background-color: red;
+    background-color: white;
     background-size: cover;
     background-position: center;
 }
 
 .card-content {
     padding: 0 14px;
-    color: white;
+    color: black;
 }
 
 .card-title {

@@ -15,7 +15,7 @@ function HeroSection() {
                 <h1 className="main-title noto-sans-kr-bold">
                      에셀 마켓
                 </h1>
-                <p className="date-location noto-sans-kr-medium">
+                <p className="date-location noto-sans-kr-bold">
                     2025.10.25(토)
                 </p>
             </div>
