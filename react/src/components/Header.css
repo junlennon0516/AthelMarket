@@ -26,7 +26,7 @@
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    color: black;
+    color: white;
 }
 
 .header-left {
@@ -61,7 +61,7 @@
 }
 
 .header-container.scrolled .menu-icon .bar {
-    background-color: black;
+    background-color: white;
 }
 
 @media (min-width: 640px) {

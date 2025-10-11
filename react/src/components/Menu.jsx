@@ -4,12 +4,12 @@ import './font.css'
 import { Link } from "react-router-dom";
 
 const menuItems = [
-    { name: "에셀 비전", path: "/vision" },
+    { name: "에셀 마켓 소개", path: "/vision" },
     { name: "교회 소개", path: "/church" },
-    { name: "에셀 계획", path: "/plan" },
-    { name: "지난 에셀 마켓", path: "/history" },
     { name: "부스 안내", path: "/booth" },
-    { name: "Q&A", path: "/qanda" }
+    { name: "Q&A", path: "/qanda" },
+    { name: "지난 에셀 마켓", path: "/history" },
+    { name: "에셀 계획", path: "/plan" },
 ];
 
 function Menu({ isOpen, onClose }) {

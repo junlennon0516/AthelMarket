@@ -17,7 +17,12 @@ import Plan from './components/Plan'
 import Church from './components/Church'
 import MarketFour from './components/MarketFour'
 
-import jikImage from './assets/image.jpg';
+import boothImage from './assets/image.jpg';
+import churchImage from './assets/church.png';
+import VisionImage from './assets/main/main-1.jpg';
+import HistoryImage from './assets/main/main-2.jpg';
+import planImage from './assets/target.png';
+import QandAImage from './assets/QandA.png';
 
 // 홈 컴포넌트
 function Home() {
@@ -39,39 +44,39 @@ function Home() {
       {/* 하단 카드 영역 */}
       <div className='content-cards'>
         <Card 
-          title="에셀 소개"
+          title="에셀 마켓 소개"
           description="에셀 마켓의 의미와 비전을 소개합니다"
-          imageUrl={jikImage}
+          imageUrl={VisionImage}
           linkTo="/vision"
         />
         <Card 
-          title="지난 에셀 마켓"
-          description="지난 에셀 마켓의 기록을 확인해보세요"
-          imageUrl={jikImage}
-          linkTo="/history"
+          title="교회 소개"
+          description="시흥순복음교회"
+          imageUrl={churchImage}
+          linkTo="/church"
         />
         <Card 
           title="부스 안내"
           description="에셀 마켓의 다양한 부스 정보를 확인해보세요"
-          imageUrl={jikImage}
+          imageUrl={boothImage}
           linkTo="/booth"
         />
         <Card 
           title="Q&A"
           description="자주 묻는 질문을 확인해보세요"
-          imageUrl={jikImage}
+          imageUrl={QandAImage}
           linkTo="/qanda"
         />
         <Card 
-          title="교회 소개"
-          description="시흥순복음교회"
-          imageUrl={jikImage}
-          linkTo="/church"
+          title="지난 에셀 마켓"
+          description="지난 에셀 마켓의 기록을 확인해보세요"
+          imageUrl={HistoryImage}
+          linkTo="/history"
         />
         <Card 
           title="에셀 계획"
           description="앞으로 에셀 마켓의 계획"
-          imageUrl={jikImage}
+          imageUrl={planImage}
           linkTo="/plan"
         />
       </div>
