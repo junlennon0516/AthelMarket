@@ -16,6 +16,7 @@ import QandA from './components/QandA'
 import Plan from './components/Plan'
 import Church from './components/Church'
 import MarketFour from './components/MarketFour'
+import Loading from './components/Loading'
 
 import boothImage from './assets/image.jpg';
 import churchImage from './assets/church.png';
@@ -23,14 +24,59 @@ import VisionImage from './assets/main/main-1.jpg';
 import HistoryImage from './assets/main/main-2.jpg';
 import planImage from './assets/target.png';
 import QandAImage from './assets/QandA.png';
+import main1 from './assets/main/main-1.jpg';
+import main2 from './assets/main/main-2.jpg';
+import main3 from './assets/main/main-3.jpg';
 
 // 홈 컴포넌트
 function Home() {
   // 메뉴 열림/닫힘 상태 관리
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // 로딩 상태 관리
+  const [isLoading, setIsLoading] = useState(true);
 
   const toggleMenu = () => {
     setIsMenuOpen(prev => !prev);
+  }
+
+  // 이미지 프리로딩
+  useEffect(() => {
+    const images = [
+      VisionImage,
+      churchImage,
+      boothImage,
+      QandAImage,
+      HistoryImage,
+      planImage,
+      // HeroSection의 main 이미지들
+      main1,
+      main2,
+      main3
+    ];
+
+    let loadedCount = 0;
+    const totalImages = images.length;
+
+    const handleImageLoad = () => {
+      loadedCount++;
+      if (loadedCount === totalImages) {
+        // 모든 이미지가 로드되면 0.5초 후에 로딩 완료
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 500);
+      }
+    };
+
+    images.forEach(src => {
+      const img = new Image();
+      img.onload = handleImageLoad;
+      img.onerror = handleImageLoad; // 에러가 발생해도 로딩 완료로 처리
+      img.src = src;
+    });
+  }, []);
+
+  if (isLoading) {
+    return <Loading />;
   }
 
   return (
