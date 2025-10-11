@@ -1,5 +1,6 @@
 import React from "react";
 import './Menu.css'
+import './font.css'
 import { Link } from "react-router-dom";
 
 const menuItems = [
@@ -30,7 +31,7 @@ function Menu({ isOpen, onClose }) {
                         <Link 
                             key={index} 
                             to={item.path} 
-                            className="menu-item"
+                            className="menu-item noto-sans-kr-medium"
                             onClick={handleCloseAndNavigate}
                         >
                             {item.name}

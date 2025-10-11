@@ -68,7 +68,7 @@
     margin-bottom: 10px;
     
     /* 배경색과 스타일 추가 */
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #fc5230;
     padding: 6px 14px;
     border-radius: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -78,7 +78,7 @@
 .dday-label {
     font-size: 12px;
     letter-spacing: 5px;
-    color: #333;
+    color: white;
     margin: 0;
 }
 
