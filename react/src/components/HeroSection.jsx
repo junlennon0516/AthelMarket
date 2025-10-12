@@ -47,7 +47,7 @@ function HeroSection() {
                     에셀 마켓
                 </h1>
                 <p className="date-location noto-sans-kr-semi-bold">
-                    2025.10.25(토)
+                    2025.10.25(토) <br/>오후 02:00~05:30
                 </p>
             </div>
             

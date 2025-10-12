@@ -44,7 +44,7 @@
 .main-title {
     font-size: 40px;
     margin: 0 0 10px 0;
-    line-height: 0.8;
+    line-height: 0.7;
     color: #fc5230;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     background: rgba(0, 0, 0, 0.2);
@@ -57,7 +57,7 @@
     font-size: 25px;
     font-weight: 600;
     display: block;
-    margin-bottom: -5px;
+    margin-bottom: -10px;
 }
 
 .date-location {
