@@ -41,7 +41,7 @@
 
 .vision-header-title {
     font-size: 18px;
-    color: #3B3B3B;
+    color: #fc5230;
     margin: 0;
     flex: 1;
     text-align: center;
@@ -70,40 +70,151 @@
     text-align: center;
 }
 
-.vision-text p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #666;
-    margin-bottom: 15px;
+/* 메인 제목 스타일 */
+.vision-main-title {
+    font-size: 32px;
+    color: #fc5230;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 768px) {
-    .vision-header {
-        padding: 12px 16px;
-    }
-    
-    .vision-header-title {
-        font-size: 16px;
-    }
-    
-    .back-button {
-        width: 36px;
-        height: 36px;
-    }
-    
-    .header-spacer {
-        width: 36px;
-    }
-    
-    .vision-content {
-        padding: 80px 20px 40px 20px;
-    }
-    
-    .vision-text {
-        padding: 40px 20px;
-    }
-    
-    .vision-text p {
-        font-size: 16px;
-    }
+/* 이미지 컨테이너 */
+.vision-image-container {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
 }
+
+.vision-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.vision-image:hover {
+    transform: scale(1.02);
+}
+
+/* 설명 텍스트 스타일 */
+.vision-description {
+    margin: 40px 0;
+    text-align: left;
+}
+
+.vision-description p {
+    font-size: 16px;
+    line-height: 1.1;
+    color: #555;
+    padding: 0 20px;
+}
+
+/* 구분선 스타일 */
+.vision-divider {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #fc5230, transparent);
+    margin: 40px 0;
+    border-radius: 1px;
+}
+
+/* 에셀의 의미 섹션 */
+.athel-meaning-section {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.athel-quote {
+    font-size: 15px;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #fc5230;
+}
+
+.athel-question {
+    font-size: 28px;
+    color: #fc5230;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.athel-definition {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.athel-tree-title {
+    font-size: 22px;
+    color: #fc5230;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* 에셀 나무 이미지 */
+.athel-tree-image-container {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.athel-tree-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.athel-tree-image:hover {
+    transform: scale(1.02);
+}
+
+.athel-tree-description {
+    text-align: left;
+    margin-bottom: 30px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    border-left: 4px solid #fc5230;
+}
+
+.athel-tree-description p {
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.athel-tree-description p:last-child {
+    margin-bottom: 0;
+}
+
+.athel-closing-message {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: left;
+    padding: 20px;
+    background-color: rgba(252, 82, 48, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(252, 82, 48, 0.2);
+}
+
+.athel-footnote {
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 0;
+    text-align: right;
+}
+
+/* 모바일 스타일은 나중에 추가할 예정 */

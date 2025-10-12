@@ -21,7 +21,7 @@ function Plan() {
             <div className="plan-content">
                 <div className="plan-text">
                     <p>에셀 마켓의 행사 계획을 소개합니다.</p>
-                    <p>우리의 계획</p>
+                    <h1>준비 중</h1>
                 </div>
             </div>
         </div>

@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './DDay.css'; 
 import './font.css';
 
-// 목표 D-Day 설정: 2025년 10월 25일 15시 00분 00초
-const TARGET_DATE = new Date('2025-10-25T15:00:00').getTime();
+// 목표 D-Day 설정: 2025년 10월 25일 00시 00분 00초
+const TARGET_DATE = new Date('2025-10-25T00:00:00').getTime();
 
 // 남은 일수를 계산하는 함수
 const calculateDaysLeft = () => {

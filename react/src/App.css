@@ -5,18 +5,26 @@
 html {
     overflow-x: hidden;
     width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 body {
     margin: 0;
     background-color: white;
     color: black;
     overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
 }
 
 .app-container { 
     margin: 0 auto;
     width: 100%;
     overflow-x: hidden;
+    overflow-y: auto;
+    min-height: 100vh;
 
     background-color: #f3eee1;
     background-size: cover;

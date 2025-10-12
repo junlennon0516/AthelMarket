@@ -7,8 +7,8 @@ import HeroSection from './components/HeroSection'
 import DDayCounter from './components/DDayCounter';
 import Card from './components/Card'; 
 import Menu from './components/Menu';
-import Map from './components/Map'
 import Footer from './components/Footer'
+import Map from './components/Map'
 import Vision from './components/Vision'
 import History from './components/History'
 import Booth from './components/Booth'

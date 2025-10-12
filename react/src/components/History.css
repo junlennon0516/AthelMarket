@@ -21,6 +21,14 @@
     z-index: 1000;
 }
 
+.history-divider {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #fc5230, transparent);
+    margin: 40px 0;
+    border-radius: 1px;
+}
+
 .back-button {
     display: flex;
     align-items: center;
@@ -41,7 +49,7 @@
 
 .history-header-title {
     font-size: 18px;
-    color: #333;
+    color: #fc5230;
     margin: 0;
     flex: 1;
     text-align: center;
@@ -54,7 +62,7 @@
 /* 탭 네비게이션 */
 .history-tabs {
     position: fixed;
-    top: 80px;
+    top: 72px;
     left: 0;
     right: 0;
     display: flex;
@@ -82,13 +90,13 @@
 
 .tab-button:hover {
     color: #333;
-    background-color: rgba(102, 126, 234, 0.1);
-    border-color: rgba(102, 126, 234, 0.3);
+    background-color: rgba(252, 82, 48, 0.1);
+    border-color: rgba(252, 82, 48, 0.3);
 }
 
 .tab-button.active {
     color: white;
-    background-color: #667eea;
+    background-color: #fc5230;
     font-weight: 600;
 }
 
@@ -146,7 +154,7 @@
     position: absolute;
     top: 20px;
     right: 20px;
-    background-color: rgba(102, 126, 234, 0.9);
+    background-color: rgba(252, 82, 48, 0.9);
     color: white;
     padding: 8px 16px;
     border-radius: 20px;
@@ -174,12 +182,21 @@
     text-align: center;
 }
 
+/* description 배열의 p 태그들 간격 조정 */
+.history-description p {
+    margin: 0 0 5px 0;
+}
+
+.history-description p:last-child {
+    margin-bottom: 0;
+}
+
 /* 주요 특징 섹션 */
 .history-highlights {
     background-color: #f8f9ff;
     border-radius: 16px;
     padding: 30px;
-    border-left: 4px solid #667eea;
+    border-left: 4px solid #fc5230;
 }
 
 .history-highlights h3 {
@@ -208,9 +225,82 @@
     position: absolute;
     left: 0;
     top: 12px;
-    color: #667eea;
+    color: #fc5230;
     font-weight: bold;
     font-size: 16px;
+}
+
+/* 히스토리 사진들 섹션 */
+.history-photos {
+    margin-top: 30px;
+}
+
+.history-photos-title {
+    text-align: center;
+    font-size: 24px;
+    color: #fc5230;
+    margin-bottom: 20px;
+}
+
+.history-photos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.history-photo-item {
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.history-photo-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.history-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* 사진 로딩 스타일 */
+.photos-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    min-height: 200px;
+}
+
+.photos-loading .loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(252, 82, 48, 0.3);
+    border-top: 3px solid #fc5230;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+.photos-loading .loading-text {
+    color: #fc5230;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* 탭 버튼 비활성화 스타일 */
+.tab-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
 }
 
 /* 반응형 디자인 */
@@ -233,7 +323,7 @@
     }
     
     .history-tabs {
-        top: 70px;
+        top: 60px;
         padding: 16px;
         gap: 12px;
     }
@@ -265,6 +355,47 @@
     
     .history-description {
         font-size: 16px;
+    }
+    
+    .history-description p {
+        margin: 0 0 3px 0;
+    }
+    
+    /* 히스토리 사진들 모바일 스타일 */
+    .history-photos {
+        margin-top: 20px;
+    }
+    
+    .history-photos-title {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .history-photos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+        margin-top: 15px;
+    }
+    
+    .history-photo-item {
+        aspect-ratio: 1/1;
+        border-radius: 8px;
+    }
+    
+    /* 모바일 로딩 스타일 */
+    .photos-loading {
+        padding: 30px 15px;
+        min-height: 150px;
+    }
+    
+    .photos-loading .loading-spinner {
+        width: 30px;
+        height: 30px;
+        border-width: 2px;
+    }
+    
+    .photos-loading .loading-text {
+        font-size: 14px;
     }
     
     .history-highlights {

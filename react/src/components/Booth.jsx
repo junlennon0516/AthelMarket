@@ -104,13 +104,15 @@ function Booth() {
                 <div className="booth-text">
                     <h2 className="noto-sans-kr-bold">2025 에셀 마켓 부스</h2>
                     <p className="noto-sans-kr-medium">다양한 부스들이 준비되어 있습니다.</p>
-                    <p className="noto-sans-kr-medium">각 부스별 특색있는 활동을 경험해보세요.</p>
+                    <p className="noto-sans-kr-medium">각 부스별 특색있는 활동을 경험해보세요!</p>
                     
                     {/* 부스 배치도 */}
                     <div className="booth-map-container">
                         <img src={googleEarthImage} alt="부스 배치도" className="booth-map" />
                     </div>
-                    
+
+                    <h1>준비 중</h1>
+                    {/* 
                     {Object.entries(boothData).map(([categoryKey, category]) => (
                         <div key={categoryKey} className="booth-category-section">
                             <div className="category-header">
@@ -132,6 +134,8 @@ function Booth() {
                             </div>
                         </div>
                     ))}
+                    */}
+                    
                 </div>
             </div>
 

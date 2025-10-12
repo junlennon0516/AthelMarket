@@ -41,7 +41,7 @@
 
 .church-header-title {
     font-size: 18px;
-    color: #333;
+    color: #fc5230;
     margin: 0;
     flex: 1;
     text-align: center;
@@ -63,47 +63,312 @@
 .church-text {
     background-color: white;
     border-radius: 16px;
-    padding: 60px 40px;
+    padding: 20px 40px;
     max-width: 800px;
     width: 100%;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-.church-text p {
+/* 메인 제목 스타일 */
+.church-main-title {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 교회 소개 스타일 */
+.church-intro-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.church-intro-text {
     font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 50px;
+    text-align: left;
+    padding: 20px;
+    background-color: rgba(252, 82, 48, 0.05);
+    border-radius: 12px;
+    border-left: 4px solid #fc5230;
+}
+
+/* 목회 비전 스타일 */
+.pastoral-vision-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+
+.church-divider {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #fc5230, transparent);
+    margin: 40px 0;
+    border-radius: 1px;
+}
+
+.pastoral-vision-text {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 50px;
+    text-align: left;
+    padding: 20px;
+    background-color: rgba(252, 82, 48, 0.05);
+    border-radius: 12px;
+    border-left: 4px solid #fc5230;
+}
+
+/* 사역 섹션들 */
+.ministry-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.ministry-section {
+    background-color: #f8f9fa;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ministry-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* 사역 헤더 바 스타일 */
+.ministry-header-bar {
+    background-color: #333;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.ministry-header-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* 사역 설명 텍스트 */
+.ministry-description {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #555;
+    text-align: left;
+}
+
+/* 사역 섹션 컨텐츠 레이아웃 */
+.ministry-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ministry-image-container {
+    width: 100%;
+    height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.ministry-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ministry-text {
+    width: 100%;
+}
+
+/* 비전 섹션들 */
+.vision-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.vision-section {
+    background-color: #f8f9fa;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vision-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* 헤더 바 스타일 */
+.vision-header-bar {
+    background-color: #333;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.vision-header-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.vision-header-number,
+.vision-header-subtitle {
+    font-size: 14px;
+    color: #ccc;
+    margin-left: auto;
+}
+
+/* 메인 헤딩 */
+.vision-main-heading {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+/* 설명 텍스트 */
+.vision-description {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #555;
+    text-align: left;
+}
+
+.church-text p {
+    font-size: 14px;
     line-height: 1.6;
     color: #666;
     margin-bottom: 15px;
 }
 
-@media (max-width: 768px) {
-    .church-header {
-        padding: 12px 16px;
-    }
-    
-    .church-header-title {
-        font-size: 16px;
-    }
-    
-    .back-button {
-        width: 36px;
-        height: 36px;
-    }
-    
-    .header-spacer {
-        width: 36px;
-    }
-    
-    .church-content {
-        padding: 80px 20px 40px 20px;
-    }
-    
-    .church-text {
-        padding: 40px 20px;
-    }
-    
-    .church-text p {
-        font-size: 16px;
-    }
+/* 교회 이미지 */
+.church-image-container {
+    text-align: center;
+    margin: 25px 0;
+    width: 100%;
 }
+
+.church-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    object-fit: contain;
+}
+
+/* 교회 정보 컨테이너 */
+.church-info-container {
+    background: transparent;
+    border: 2px solid #fc5230;
+    padding: 25px 30px;
+    border-radius: 12px;
+    margin: 20px 0 30px 0;
+}
+
+.church-info-item {
+    color: #555 !important;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.church-info-item:last-child {
+    margin-bottom: 0;
+}
+
+/* 교회 초대 메시지 */
+.church-invitation {
+    color: #fc5230;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* 교회 구분선 */
+.church-divider {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, #fc5230, #ff6b47, #fc5230);
+    margin: 30px 0;
+    border-radius: 1px;
+}
+
+/* 예배 시간표 */
+.worship-schedule {
+    margin: 20px 0;
+    padding: 0;
+}
+
+.worship-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+.worship-item:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-color: #fc5230;
+}
+
+.worship-item:last-child {
+    margin-bottom: 0;
+}
+
+.worship-name {
+    flex: 1;
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+}
+
+.worship-day {
+    flex: 0 0 80px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    padding: 4px 8px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    margin: 0 10px;
+}
+
+.worship-time {
+    flex: 0 0 100px;
+    font-size: 15px;
+    color: #fc5230;
+    text-align: right;
+    font-weight: bold;
+}
+
+/* 모바일 스타일은 나중에 추가할 예정 */
