@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './QandA.css';
 import './font.css';
 
 function QandA() {
     const [openFAQ, setOpenFAQ] = useState(null);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const faqs = [
         {

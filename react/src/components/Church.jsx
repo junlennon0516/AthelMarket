@@ -11,7 +11,18 @@ import ChurchMap from './ChurchMap';
 
 function Church() {
     useEffect(() => {
+        // 즉시 스크롤 초기화
         window.scrollTo(0, 0);
+        
+        // 모바일에서 지연된 스크롤 초기화
+        setTimeout(() => {
+            window.scrollTo(0, 0);
+        }, 100);
+        
+        // 추가 보정 (iOS Safari 대응)
+        setTimeout(() => {
+            window.scrollTo(0, 0);
+        }, 300);
     }, []);
 
     return (

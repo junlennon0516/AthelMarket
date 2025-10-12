@@ -6,9 +6,20 @@ import main1Image from '../assets/main/main-1.jpg';
 import athelTreeImage from '../assets/athel_tree.jpg';
 
 function Vision() {
-    // 페이지가 로드될 때 맨 위로 스크롤
+    // 페이지가 로드될 때 맨 위로 스크롤 (모바일 대응)
     useEffect(() => {
+        // 즉시 스크롤 초기화
         window.scrollTo(0, 0);
+        
+        // 모바일에서 지연된 스크롤 초기화
+        setTimeout(() => {
+            window.scrollTo(0, 0);
+        }, 100);
+        
+        // 추가 보정 (iOS Safari 대응)
+        setTimeout(() => {
+            window.scrollTo(0, 0);
+        }, 300);
     }, []);
     return (
         <div className="vision-container">
