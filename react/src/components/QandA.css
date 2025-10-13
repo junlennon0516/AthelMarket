@@ -186,3 +186,24 @@
         font-size: 14px;
     }
 }
+
+/* 기타 문의 스타일 */
+.contact-info {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.contact-label {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fc5230;
+    margin-bottom: 8px;
+}
+
+.contact-phone {
+    display: block;
+    font-size: 20px;
+    color: #fc5230;
+    font-weight: 500;
+}

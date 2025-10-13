@@ -24,7 +24,7 @@ function QandA() {
         {
             id: 3,
             question: "부스 운영 시간은 어떻게 되나요?",
-            answer: "오전 10시부터 오후 6시까지 운영됩니다."
+            answer: "오후 2시부터 오후 5시 30분까지 운영됩니다."
         },
         {
             id: 4,
@@ -75,6 +75,11 @@ function QandA() {
                                 )}
                             </div>
                         ))}
+                    </div>
+                    
+                    <div className="contact-info">
+                        <span className="contact-label">기타 문의</span>
+                        <span className="contact-phone">T. 031-317-5017</span>
                     </div>
                 </div>
             </div>

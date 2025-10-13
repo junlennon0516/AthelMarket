@@ -53,47 +53,8 @@ function Church() {
                          <span className="church-info-item noto-sans-kr-medium">경기도 시흥시 시청로 78 시흥순복음교회<br/></span>
                          <span className="church-info-item noto-sans-kr-medium">T. 031-517-5017</span>
                      </div>
-                    
-                    <h2 className="pastoral-vision-title noto-sans-kr-bold">01 목회 비전</h2>
-                    
-                    {/* 비전 섹션들 */}
-                    <div className="vision-sections">
-                        {/* 일만플랜 섹션 */}
-                        <div className="vision-section ilman-plan">
-                            <div className="vision-header-bar">
-                                <span className="vision-header-title noto-sans-kr-bold">일만플랜</span>
-                                <span className="vision-header-number">561</span>
-                            </div>
-                            <h3 className="vision-main-heading noto-sans-kr-bold">
-                                오대양 육대주에 <br/>일만개의 교회를 세우자!
-                            </h3>
-                            <p className="vision-description noto-sans-kr-medium">
-                                예수님의 지상명령인 <b>만민에게 복음을 전파하기 위하여</b> 교육, 기업, 의료, 복지, 교회를 이루는 
-                                5대 기관을 세워 <b>오대양 육대주에 일만개의 교회를 세우는 비전</b>을 품고 달려나아가고 있습니다.
-                            </p>
-                        </div>
-                        
-                        {/* LBO 캠페인 섹션 */}
-                        <div className="vision-section lbo-campaign">
-                            <div className="vision-header-bar">
-                                <span className="vision-header-title noto-sans-kr-bold">LBO</span>
-                                <span className="vision-header-subtitle">Let's bless others</span>
-                            </div>
-                            <h3 className="vision-main-heading noto-sans-kr-bold">
-                                남을 잘되게 하자!
-                            </h3>
-                            <p className="vision-description noto-sans-kr-medium">
-                                예수님의 사랑으로 삶에 지쳐있는 이들에게 힘과 위로와 소망을 주고 다시 일으켜 세워 
-                                복된 삶으로 나갈 수 있도록 <b>도움을 주고자 힘쓰는 시흥순복음교회 캠페인</b>입니다.
-                            </p>
-                        </div>
-                    </div>
 
-                    
-                    {/* 구분선 */}
-                    <hr className="church-divider" />
-                    
-                    <h2 className="church-intro-title noto-sans-kr-bold">02 교회 소개</h2>
+                     <h2 className="church-intro-title noto-sans-kr-bold">교회 소개</h2>
                     <p className="church-intro-text noto-sans-kr-medium">
                     시흥순복음교회는<br/>
                     기독교대한하나님의성회 안산시흥지방회에 소속된 교회로서<br/>
@@ -216,6 +177,44 @@ function Church() {
                             </div>
                         </div>
                     </div>
+                    
+                    {/* 구분선 */}
+                    <hr className="church-divider" />
+                    
+                    <h2 className="pastoral-vision-title noto-sans-kr-bold">목회 비전</h2>
+                    
+                    {/* 비전 섹션들 */}
+                    <div className="vision-sections">
+                        {/* 일만플랜 섹션 */}
+                        <div className="vision-section ilman-plan">
+                            <div className="vision-header-bar">
+                                <span className="vision-header-title noto-sans-kr-bold">일만플랜</span>
+                                <span className="vision-header-number">561</span>
+                            </div>
+                            <h3 className="vision-main-heading noto-sans-kr-bold">
+                                오대양 육대주에 <br/>일만개의 교회를 세우자!
+                            </h3>
+                            <p className="vision-description noto-sans-kr-medium">
+                                예수님의 지상명령인 <b>만민에게 복음을 전파하기 위하여</b> 교육, 기업, 의료, 복지, 교회를 이루는 
+                                5대 기관을 세워 <b>오대양 육대주에 일만개의 교회를 세우는 비전</b>을 품고 달려나아가고 있습니다.
+                            </p>
+                        </div>
+                        
+                        {/* LBO 캠페인 섹션 */}
+                        <div className="vision-section lbo-campaign">
+                            <div className="vision-header-bar">
+                                <span className="vision-header-title noto-sans-kr-bold">LBO</span>
+                                <span className="vision-header-subtitle">Let's bless others</span>
+                            </div>
+                            <h3 className="vision-main-heading noto-sans-kr-bold">
+                                남을 잘되게 하자!
+                            </h3>
+                            <p className="vision-description noto-sans-kr-medium">
+                                예수님의 사랑으로 삶에 지쳐있는 이들에게 힘과 위로와 소망을 주고 다시 일으켜 세워 
+                                복된 삶으로 나갈 수 있도록 <b>도움을 주고자 힘쓰는 시흥순복음교회 캠페인</b>입니다.
+                            </p>
+                        </div>
+                    </div>               
                     
                     {/* 구분선 */}
                     <hr className="church-divider" />
