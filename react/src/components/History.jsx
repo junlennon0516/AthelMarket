@@ -34,6 +34,17 @@ import history2_10 from '../assets/history/history-2/5N3A3728.jpg';
 import history2_11 from '../assets/history/history-2/5N3A3736.jpg';
 import history2_12 from '../assets/history/history-2/5N3A3741.jpg';
 
+import history3_1 from '../assets/history/history-3/1.jpg';
+import history3_2 from '../assets/history/history-3/2.jpg';
+import history3_3 from '../assets/history/history-3/3.jpg';
+import history3_4 from '../assets/history/history-3/4.jpg';
+import history3_5 from '../assets/history/history-3/5.jpg';
+import history3_6 from '../assets/history/history-3/6.jpg';
+import history3_7 from '../assets/history/history-3/7.jpg';
+import history3_8 from '../assets/history/history-3/8.jpg';
+import history3_9 from '../assets/history/history-3/9.jpg';
+import history3_10 from '../assets/history/history-3/10.jpg';
+
 function History() {
     const [activeTab, setActiveTab] = useState(1);
     const [isLoading, setIsLoading] = useState(false);
@@ -102,9 +113,16 @@ function History() {
             { src: history2_12, alt: "2차 에셀 마켓 사진 12" }
         ],
         3: [
-            // { src: history3_1, alt: "3차 에셀 마켓 사진 1" },
-            // { src: history3_2, alt: "3차 에셀 마켓 사진 2" },
-            // { src: history3_3, alt: "3차 에셀 마켓 사진 3" }
+            { src: history3_1, alt: "3차 에셀 마켓 사진 1" },
+            { src: history3_2, alt: "3차 에셀 마켓 사진 2" },
+            { src: history3_3, alt: "3차 에셀 마켓 사진 3" },
+            { src: history3_4, alt: "3차 에셀 마켓 사진 4" },
+            { src: history3_5, alt: "3차 에셀 마켓 사진 5" },
+            { src: history3_6, alt: "3차 에셀 마켓 사진 6" },
+            { src: history3_7, alt: "3차 에셀 마켓 사진 7" },
+            { src: history3_8, alt: "3차 에셀 마켓 사진 8" },
+            { src: history3_9, alt: "3차 에셀 마켓 사진 9" },
+            { src: history3_10, alt: "3차 에셀 마켓 사진 10" }
         ]
     };
 
