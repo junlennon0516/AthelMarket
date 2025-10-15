@@ -3,6 +3,24 @@ import { Link } from 'react-router-dom';
 import './Booth.css';
 import './font.css';
 import googleEarthImage from '../assets/google_earth_edit.png';
+import tteokImage from '../assets/booth_icons/tteok.png';
+import pancakeImage from '../assets/booth_icons/pancake.png';
+import steakImage from '../assets/booth_icons/steak.png';
+import icedCoffeeImage from '../assets/booth_icons/iced-coffee.png';
+import cottonCandyImage from '../assets/booth_icons/cotton-candy.png';
+import iceCreamImage from '../assets/booth_icons/ice-cream.png';
+import flowerImage from '../assets/booth_icons/flower.png';
+import socksImage from '../assets/booth_icons/socks.png';
+import ceramicsImage from '../assets/booth_icons/ceramics.png';
+import toysImage from '../assets/booth_icons/toys.png';
+import ballPitImage from '../assets/booth_icons/ball-pit.png';
+import baseballImage from '../assets/booth_icons/baseball.png';
+import dalgonaImage from '../assets/booth_icons/dalgona.png';
+import keychainImage from '../assets/booth_icons/keychain.png';
+import lunchBoxImage from '../assets/booth_icons/lunch-box.png';
+import manicureImage from '../assets/booth_icons/manicure.png';
+import potatoImage from '../assets/booth_icons/potato.png';
+import animalImage from '../assets/booth_icons/livestock.png';
 
 function Booth() {
     const [selectedBooth, setSelectedBooth] = useState(null);
@@ -14,66 +32,164 @@ function Booth() {
 
     const boothData = {
         food: {
-            title: "🍕 음식 부스",
-            description: "다양한 음식과 음료를 제공합니다",
+            title: "푸드존",
+            description: "먹고, 또 먹고, 그래도 먹고 싶은 맛집 총출동!",
             booths: [
                 {
-                    id: "pizza",
-                    title: "🍕 피자 부스",
-                    location: "주차장",
-                    details: "신선한 재료로 만든 정통 이탈리안 피자와 다양한 토핑을 제공합니다. 갓 구운 피자의 따뜻한 맛을 경험해보세요.",
-                    items: ["마르게리타", "페퍼로니", "하와이안", "치즈 피자"],
-                    image: "/api/placeholder/80/80"
-                }, 
+                    id: "snack",
+                    title: "분식",
+                    location: "",
+                    details: "준비중",
+                    items: ["떡볶이: ", "어묵: "],
+                    image: tteokImage
+                },
                 {
-                    id: "pizza",
-                    title: "카페",
-                    location: "3층",
-                    details: "신선한 재료로 만든 정통 이탈리안 피자와 다양한 토핑을 제공합니다. 갓 구운 피자의 따뜻한 맛을 경험해보세요.",
-                    items: ["마르게리타", "페퍼로니", "하와이안", "치즈 피자"],
-                    image: "/api/placeholder/80/80"
-                }, 
+                    id: "pancake",
+                    title: "전",
+                    location: "",
+                    details: "준비중",
+                    items: ["김치전", "파전"],
+                    image: pancakeImage
+                },
+                {
+                    id: "meat",
+                    title: "고기",
+                    location: "",
+                    details: "준비중",
+                    items: [""],
+                    image: steakImage
+                },
+                {
+                    id: "drinks",
+                    title: "음료",
+                    location: "",
+                    details: "준비중",
+                    items: ["아이스아메리카노", "아이스티"],
+                    image: icedCoffeeImage
+                },
+                {
+                    id: "candy",
+                    title: "솜사탕",
+                    location: "",
+                    details: "준비중",
+                    items: [""],
+                    image: cottonCandyImage
+                },
+                {
+                    id: "icecream",
+                    title: "요아정",
+                    location: "",
+                    details: "준비중",
+                    items: [""],
+                    image: iceCreamImage
+                },
             ]
         },
         game: {
-            title: "🎮 게임 부스",
-            description: "재미있는 게임과 이벤트를 즐기세요",
+            title: "놀이/체험존",
+            description: "아이도 어른도 함께 웃는 즐거운 체험들!",
             booths: [
                 {
-                    id: "boardgame",
-                    title: "🎲 보드게임 부스",
-                    location: "1층",
-                    details: "다양한 보드게임과 카드게임을 즐길 수 있습니다. 친구들과 함께 즐거운 시간을 보내세요.",
-                    items: ["할리갈리", "우노", "스플렌더", "카탄"],
-                    image: "/api/placeholder/80/80"
-                }
-            ]
-        },
-        experience: {
-            title: "🎨 체험 부스",
-            description: "창작 활동과 체험 프로그램",
-            booths: [
+                    id: "animal",
+                    title: "동물체험",
+                    location: "",
+                    details: "준비중",
+                    items: [""],
+                    image: animalImage
+                },
                 {
-                    id: "craft",
-                    title: "🎨 공예 부스",
-                    location: "1층",
-                    details: "직접 만들고 체험할 수 있는 다양한 공예 활동을 제공합니다. 창의적인 작품을 만들어보세요.",
-                    items: ["도자기", "목공예", "천연비누", "캔들"],
-                    image: "/api/placeholder/80/80"
-                }
+                    id: "airzone",
+                    title: "미니에어바운스",
+                    location: "",
+                    details: "준비중",
+                    items: [""],
+                    image: ballPitImage
+                },
+                {
+                    id: "keyring",
+                    title: "키링 만들기",
+                    location: "",
+                    details: "준비중",
+                    items: [""],
+                    image: keychainImage
+                },
+                {
+                    id: "dal",
+                    title: "달고나",
+                    location: "",
+                    details: "준비중",
+                    items: [""],
+                    image: dalgonaImage
+                },
+                {
+                    id: "baseball",
+                    title: "야구공 던지기",
+                    location: "",
+                    details: "준비중",
+                    items: [""],
+                    image: baseballImage
+                },
+                {
+                    id: "nail",
+                    title: "네일아트",
+                    location: "",
+                    details: "준비중",
+                    items: [""],
+                    image: manicureImage
+                },
+                {
+                    id: "potato",
+                    title: "감자캐기",
+                    location: "",
+                    details: "준비중",
+                    items: [""],
+                    image: potatoImage
+                },
             ]
         },
         sale: {
-            title: "🛍️ 판매 부스",
-            description: "특별한 상품들을 만나보세요",
+            title: "쇼핑존",
+            description: "사는 재미, 보는 재미, 고르는 재미 총집합!",
             booths: [
                 {
-                    id: "souvenir",
-                    title: "🛍️ 기념품 부스",
-                    location: "1층",
-                    details: "에셀 마켓만의 특별한 기념품과 핸드메이드 상품을 판매합니다. 의미있는 선물을 찾아보세요.",
-                    items: ["키링", "스티커", "텀블러", "액자"],
-                    image: "/api/placeholder/80/80"
+                    id: "flower",
+                    title: "꽃",
+                    location: "",
+                    details: "준비중",
+                    items: ["꽃"],
+                    image: flowerImage
+                },
+                {
+                    id: "underwear",
+                    title: "언더웨어 / 양말",
+                    location: "",
+                    details: "준비중",
+                    items: ["언더웨어", "양말"],
+                    image: socksImage
+                },
+                {
+                    id: "dish",
+                    title: "도자기그릇",
+                    location: "",
+                    details: "준비중",
+                    items: [""],
+                    image: ceramicsImage
+                },
+                {
+                    id: "toy",
+                    title: "문구 / 완구",
+                    location: "",
+                    details: "준비중",
+                    items: [""],
+                    image: toysImage
+                },
+                {
+                    id: "food",
+                    title: "반찬",
+                    location: "",
+                    details: "준비중",
+                    items: [""],
+                    image: lunchBoxImage
                 },
             ]
         }
@@ -103,21 +219,19 @@ function Booth() {
             <div className="booth-content">
                 <div className="booth-text">
                     <h2 className="noto-sans-kr-bold">2025 에셀 마켓 부스</h2>
-                    <p className="noto-sans-kr-medium">다양한 부스들이 준비되어 있습니다.</p>
-                    <p className="noto-sans-kr-medium">각 부스별 특색있는 활동을 경험해보세요!</p>
+                    <p className="noto-sans-kr-medium">다양한 부스들이 준비되어 있습니다</p>
                     
                     {/* 부스 배치도 */}
                     <div className="booth-map-container">
                         <img src={googleEarthImage} alt="부스 배치도" className="booth-map" />
                     </div>
-
-                    <h1>준비 중</h1>
-                    {/* 
+                    
                     {Object.entries(boothData).map(([categoryKey, category]) => (
                         <div key={categoryKey} className="booth-category-section">
                             <div className="category-header">
-                                <h3 className="category-title">{category.title}</h3>
+                                <h3 className="category-title noto-sans-kr-bold">{category.title}</h3>
                             </div>
+                            <p className="category-description">{category.description}</p>
                             <div className="booth-list">
                                 {category.booths.map((booth) => (
                                     <div key={booth.id} className="booth-item" onClick={() => openModal(booth)}>
@@ -134,7 +248,6 @@ function Booth() {
                             </div>
                         </div>
                     ))}
-                    */}
                     
                 </div>
             </div>
@@ -150,7 +263,7 @@ function Booth() {
                         <div className="modal-content">
                             <p className="modal-description">{selectedBooth.details}</p>
                             <div className="modal-items">
-                                <h4>제공 항목:</h4>
+                                <h4>판매 항목 / 가격:</h4>
                                 <ul>
                                     {selectedBooth.items.map((item, index) => (
                                         <li key={index}>{item}</li>
