@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './MarketFour.css';
 import './font.css';
-import posterImage from '../assets/poster/poster-4.jpg';
+import posterImage1 from '../assets/poster/poster-4.png';
+import posterImage2 from '../assets/poster/poster-animal.png';
 
 function MarketFour() {
     // 페이지가 로드될 때 맨 위로 스크롤
@@ -28,7 +29,10 @@ function MarketFour() {
                     <h1 className="marketfour-main-title noto-sans-kr-bold">제 4차 에셀 마켓</h1>
                     
                     <div className="poster-container">
-                        <img src={posterImage} alt="제 4차 에셀 마켓 포스터" className="poster-image" />
+                        <img src={posterImage1} alt="제 4차 에셀 마켓 포스터" className="poster-image" />
+                    </div>
+                    <div className="poster-container">
+                        <img src={posterImage2} alt="제 4차 에셀 마켓 포스터" className="poster-image" />
                     </div>
                     
                     <div className="marketfour-description">

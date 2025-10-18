@@ -97,7 +97,7 @@ function Home() {
         />
         <Card 
           title="교회 소개"
-          description="시흥순복음교회"
+          description="시흥순복음교회와 교회의 비전을 소개합니다"
           imageUrl={churchImage}
           linkTo="/church"
         />

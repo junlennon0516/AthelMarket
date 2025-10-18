@@ -196,14 +196,12 @@
 .contact-label {
     display: block;
     font-size: 18px;
-    font-weight: 600;
     color: #fc5230;
     margin-bottom: 8px;
 }
 
 .contact-phone {
     display: block;
-    font-size: 20px;
+    font-size: 15px;
     color: #fc5230;
-    font-weight: 500;
 }

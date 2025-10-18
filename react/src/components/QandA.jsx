@@ -29,7 +29,17 @@ function QandA() {
         {
             id: 4,
             question: "주차는 가능한가요?",
-            answer: "주차 공간이 제한적이므로 대중교통 이용을 권장합니다."
+            answer: "주차장이 따로 마련되어 있지 않습니다. 주변 아파트나 공용주차장을 사용하시거나 대중교통 또는 도보이동 해주시기 바랍니다."
+        },
+        {
+            id: 5,
+            question: "부스 이용시 결제는 어떻게 하나요?",
+            answer: "신용카드 거래 불가능하고 계좌이체 또는 현금결제만 가능합니다."
+        },
+        {
+            id: 6,
+            question: "다음 에셀 마켓은 언제 개최하나요?",
+            answer: "다음 에셀 마켓 일정이 확정될 때마다 해당 사이트의 '에셀 계획' 페이지에 공지할 예정입니다."
         }
     ];
 
@@ -78,8 +88,8 @@ function QandA() {
                     </div>
                     
                     <div className="contact-info">
-                        <span className="contact-label">기타 문의</span>
-                        <span className="contact-phone">T. 031-317-5017</span>
+                        <span className="contact-label noto-sans-kr-bold">기타 문의</span>
+                        <span className="contact-phone noto-sans-kr-bold">T. 031-317-5017</span>
                     </div>
                 </div>
             </div>

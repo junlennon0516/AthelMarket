@@ -1,8 +1,7 @@
 .hero-section {
     position: relative;
-    background-blend-mode: overlay;
 
-    min-height: 60vh;
+    min-height: 70vh;
     padding: 80px 16px 30px 16px; 
 
     display: flex;
@@ -76,31 +75,43 @@
     flex-direction: column;
 
     width: 100%;
+    padding: 25px 16px;
 
     align-items: center; 
-    margin-top: 16px;
     color: black;
     position: relative;
     z-index: 1;
+    background-color: #ffcd4a;
 }
 
 .dday-label-container {
     /*D-day 레이블을 왼쪽 정렬 */
-    align-self: flex-start; 
+    align-self: center; 
     margin-left: clamp(8px, 2vw, 16px);
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     
     /* 배경색과 스타일 추가 */
     background-color: #fc5230;
-    padding: 6px 14px;
+    padding: 10px 14px;
     border-radius: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(10px);
+    
+    /* D-day와 날짜를 가로로 배치 */
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .dday-label {
     font-size: 12px;
     letter-spacing: 5px;
+    color: white;
+    margin: 0;
+}
+
+.date-label {
+    font-size: 14px;
     color: white;
     margin: 0;
 }
@@ -172,6 +183,12 @@
         padding: 100px 20px 40px 20px;
         min-height: 70vh;
     }
+    .dday-wrapper {
+        padding: 50px 20px;
+    }
+    .dday-label-container {
+        padding: 10px 14px;
+    }
     .main-title {
         font-size: 48px;
     }
@@ -185,6 +202,12 @@
         padding: 120px 24px 50px 24px;
         min-height: 75vh;
     }
+    .dday-wrapper {
+        padding: 50px 24px;
+    }
+    .dday-label-container {
+        padding: 10px 14px;
+    }
     .main-title {
         font-size: 56px;
     }
@@ -196,6 +219,10 @@
 @media (max-width: 768px) {
     .dday-container {
         gap: 15px;
+    }
+    
+    .dday-label-container {
+        padding: 10px 14px;
     }
     
     .dday-container .time-block {

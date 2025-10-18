@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Booth.css';
 import './font.css';
-import googleEarthImage from '../assets/BoothMap.jpg';
+import googleEarthImage from '../assets/BoothMap2.jpg';
 import tteokImage from '../assets/booth_icons/tteok.png';
 import pancakeImage from '../assets/booth_icons/pancake.png';
 import skewerImage from '../assets/booth_icons/skewer.png';
@@ -105,7 +105,7 @@ function Booth() {
                 {
                     id: "animal",
                     title: "어흥! 동물체험",
-                    location: "4. 농장",
+                    location: "3. 농장",
                     details: "준비중",
                     items: [""],
                     image: animalImage
@@ -113,7 +113,7 @@ function Booth() {
                 {
                     id: "potato",
                     title: "감자캐기",
-                    location: "3. 건물 뒤 컨테이너 박스 앞",
+                    location: "2. 건물 뒤 컨테이너 박스 앞",
                     details: "준비중",
                     items: [""],
                     image: potatoImage
@@ -129,7 +129,7 @@ function Booth() {
                 {
                     id: "ball",
                     title: "랭킹 우주홀",
-                    location: "4. 농장",
+                    location: "3. 농장",
                     details: "준비중",
                     items: [""],
                     image: ballImage
@@ -137,7 +137,7 @@ function Booth() {
                 {
                     id: "baseball",
                     title: "야구공 던지기",
-                    location: "4. 농장",
+                    location: "3. 농장",
                     details: "준비중",
                     items: [""],
                     image: baseballImage
@@ -241,7 +241,7 @@ function Booth() {
             <div className="booth-content">
                 <div className="booth-text">
                     <h2 className="noto-sans-kr-bold">제 4차 에셀 마켓 부스</h2>
-                    <p className="noto-sans-kr-medium">다양한 부스들이 준비되어 있습니다</p>
+                    <p className="noto-sans-kr-medium">다양한 부스들이 준비되어 있습니다!</p>
                     
                     {/* 부스 배치도 */}
                     <div className="booth-map-container">
@@ -258,14 +258,10 @@ function Booth() {
                             </div>
                             <div className="location-item">
                                 <div className="location-number">2</div>
-                                <div className="location-text">건물 3층</div>
-                            </div>
-                            <div className="location-item">
-                                <div className="location-number">3</div>
                                 <div className="location-text">건물 뒤 컨테이너 박스 앞</div>
                             </div>
                             <div className="location-item">
-                                <div className="location-number">4</div>
+                                <div className="location-number">3</div>
                                 <div className="location-text">농장</div>
                             </div>
                         </div>
@@ -288,8 +284,8 @@ function Booth() {
                                         </div>
                                         <div className="booth-info">
                                             <div className="booth-title">{booth.title}</div>
-                                            <div className="booth-location">
-                                                {booth.location}
+                                            <div className="booth-location noto-sans-kr-medium">
+                                                위치 - {booth.location}
                                             </div>
                                             <div className="booth-details">{booth.details}</div>
                                             {booth.items && booth.items.length > 0 && booth.items.some(item => item.trim() !== '') && (
