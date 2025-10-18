@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Booth.css';
 import './font.css';
-import googleEarthImage from '../assets/google_earth_edit.png';
+import googleEarthImage from '../assets/BoothMap.jpg';
 import tteokImage from '../assets/booth_icons/tteok.png';
 import pancakeImage from '../assets/booth_icons/pancake.png';
-import steakImage from '../assets/booth_icons/steak.png';
+import skewerImage from '../assets/booth_icons/skewer.png';
 import icedCoffeeImage from '../assets/booth_icons/iced-coffee.png';
 import cottonCandyImage from '../assets/booth_icons/cotton-candy.png';
-import iceCreamImage from '../assets/booth_icons/ice-cream.png';
+import tacoImage from '../assets/booth_icons/taco.png';
 import flowerImage from '../assets/booth_icons/flower.png';
 import socksImage from '../assets/booth_icons/socks.png';
 import ceramicsImage from '../assets/booth_icons/ceramics.png';
@@ -18,16 +18,29 @@ import baseballImage from '../assets/booth_icons/baseball.png';
 import dalgonaImage from '../assets/booth_icons/dalgona.png';
 import keychainImage from '../assets/booth_icons/keychain.png';
 import lunchBoxImage from '../assets/booth_icons/lunch-box.png';
-import manicureImage from '../assets/booth_icons/manicure.png';
+import ballImage from '../assets/booth_icons/ball.png';
 import potatoImage from '../assets/booth_icons/potato.png';
 import animalImage from '../assets/booth_icons/livestock.png';
+import jewelryImage from '../assets/booth_icons/jewelry.png';
+import clothesImage from '../assets/booth_icons/clothes-rack.png';
 
 function Booth() {
-    const [selectedBooth, setSelectedBooth] = useState(null);
 
     // 페이지가 로드될 때 맨 위로 스크롤
     useEffect(() => {
+        // 즉시 스크롤을 맨 위로 이동
         window.scrollTo(0, 0);
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+        
+        // 추가적으로 약간의 지연 후에도 스크롤 위치 확인
+        const timer = setTimeout(() => {
+            window.scrollTo(0, 0);
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+        }, 100);
+        
+        return () => clearTimeout(timer);
     }, []);
 
     const boothData = {
@@ -36,36 +49,20 @@ function Booth() {
             description: "먹고, 또 먹고, 그래도 먹고 싶은 맛집 총출동!",
             booths: [
                 {
+                    id: "skewer",
+                    title: "꼬치",
+                    location: "1. 건물 1층",
+                    details: "준비중",
+                    items: ["소시지꼬치", "옥수수꼬치", "마시멜로우꼬치"],
+                    image: skewerImage
+                },
+                {
                     id: "snack",
                     title: "분식",
-                    location: "",
+                    location: "1. 건물 1층",
                     details: "준비중",
                     items: ["떡볶이: ", "어묵: "],
                     image: tteokImage
-                },
-                {
-                    id: "pancake",
-                    title: "전",
-                    location: "",
-                    details: "준비중",
-                    items: ["김치전", "파전"],
-                    image: pancakeImage
-                },
-                {
-                    id: "meat",
-                    title: "고기",
-                    location: "",
-                    details: "준비중",
-                    items: [""],
-                    image: steakImage
-                },
-                {
-                    id: "drinks",
-                    title: "음료",
-                    location: "",
-                    details: "준비중",
-                    items: ["아이스아메리카노", "아이스티"],
-                    image: icedCoffeeImage
                 },
                 {
                     id: "candy",
@@ -76,12 +73,28 @@ function Booth() {
                     image: cottonCandyImage
                 },
                 {
-                    id: "icecream",
-                    title: "요아정",
+                    id: "drinks",
+                    title: "음료",
                     location: "",
                     details: "준비중",
+                    items: ["아이스아메리카노", "아이스티"],
+                    image: icedCoffeeImage
+                },
+                {
+                    id: "taco",
+                    title: "워킹타코",
+                    location: "1. 건물 1층",
+                    details: "준비중",
                     items: [""],
-                    image: iceCreamImage
+                    image: tacoImage
+                },
+                {
+                    id: "pancake",
+                    title: "전",
+                    location: "1. 건물 1층",
+                    details: "준비중",
+                    items: ["김치전", "부추전"],
+                    image: pancakeImage
                 },
             ]
         },
@@ -91,15 +104,47 @@ function Booth() {
             booths: [
                 {
                     id: "animal",
-                    title: "동물체험",
-                    location: "",
+                    title: "어흥! 동물체험",
+                    location: "4. 농장",
                     details: "준비중",
                     items: [""],
                     image: animalImage
                 },
                 {
+                    id: "potato",
+                    title: "감자캐기",
+                    location: "3. 건물 뒤 컨테이너 박스 앞",
+                    details: "준비중",
+                    items: [""],
+                    image: potatoImage
+                },
+                {
+                    id: "dal",
+                    title: "달고나",
+                    location: "",
+                    details: "준비중",
+                    items: [""],
+                    image: dalgonaImage
+                },
+                {
+                    id: "ball",
+                    title: "랭킹 우주홀",
+                    location: "4. 농장",
+                    details: "준비중",
+                    items: [""],
+                    image: ballImage
+                },
+                {
+                    id: "baseball",
+                    title: "야구공 던지기",
+                    location: "4. 농장",
+                    details: "준비중",
+                    items: [""],
+                    image: baseballImage
+                },
+                {
                     id: "airzone",
-                    title: "미니에어바운스",
+                    title: "에어바운스",
                     location: "",
                     details: "준비중",
                     items: [""],
@@ -112,38 +157,6 @@ function Booth() {
                     details: "준비중",
                     items: [""],
                     image: keychainImage
-                },
-                {
-                    id: "dal",
-                    title: "달고나",
-                    location: "",
-                    details: "준비중",
-                    items: [""],
-                    image: dalgonaImage
-                },
-                {
-                    id: "baseball",
-                    title: "야구공 던지기",
-                    location: "",
-                    details: "준비중",
-                    items: [""],
-                    image: baseballImage
-                },
-                {
-                    id: "nail",
-                    title: "네일아트",
-                    location: "",
-                    details: "준비중",
-                    items: [""],
-                    image: manicureImage
-                },
-                {
-                    id: "potato",
-                    title: "감자캐기",
-                    location: "",
-                    details: "준비중",
-                    items: [""],
-                    image: potatoImage
                 },
             ]
         },
@@ -160,14 +173,6 @@ function Booth() {
                     image: flowerImage
                 },
                 {
-                    id: "underwear",
-                    title: "언더웨어 / 양말",
-                    location: "",
-                    details: "준비중",
-                    items: ["언더웨어", "양말"],
-                    image: socksImage
-                },
-                {
                     id: "dish",
                     title: "도자기그릇",
                     location: "",
@@ -177,31 +182,48 @@ function Booth() {
                 },
                 {
                     id: "toy",
-                    title: "문구 / 완구",
+                    title: "문구완구",
                     location: "",
                     details: "준비중",
                     items: [""],
                     image: toysImage
                 },
                 {
-                    id: "food",
+                    id: "side-dish",
                     title: "반찬",
                     location: "",
                     details: "준비중",
                     items: [""],
                     image: lunchBoxImage
                 },
+                {
+                    id: "jewelry",
+                    title: "악세서리",
+                    location: "",
+                    details: "준비중",
+                    items: [""],
+                    image: jewelryImage
+                },
+                {
+                    id: "clothes",
+                    title: "옷 / 잡화류",
+                    location: "",
+                    details: "준비중",
+                    items: [""],
+                    image: clothesImage
+                },
+                {
+                    id: "underwear",
+                    title: "언더웨어 / 양말",
+                    location: "",
+                    details: "준비중",
+                    items: ["언더웨어", "양말"],
+                    image: socksImage
+                },
             ]
         }
     };
 
-    const openModal = (boothType) => {
-        setSelectedBooth(boothType);
-    };
-
-    const closeModal = () => {
-        setSelectedBooth(null);
-    };
     return (
         <div className="booth-container">
             {/* 헤더 */}
@@ -218,7 +240,7 @@ function Booth() {
             {/* 메인 콘텐츠 */}
             <div className="booth-content">
                 <div className="booth-text">
-                    <h2 className="noto-sans-kr-bold">2025 에셀 마켓 부스</h2>
+                    <h2 className="noto-sans-kr-bold">제 4차 에셀 마켓 부스</h2>
                     <p className="noto-sans-kr-medium">다양한 부스들이 준비되어 있습니다</p>
                     
                     {/* 부스 배치도 */}
@@ -226,22 +248,62 @@ function Booth() {
                         <img src={googleEarthImage} alt="부스 배치도" className="booth-map" />
                     </div>
                     
+                    {/* 위치 안내 */}
+                    <div className="location-guide">
+                        <h3 className="location-title noto-sans-kr-bold">부스 위치 안내</h3>
+                        <div className="location-table">
+                            <div className="location-item">
+                                <div className="location-number">1</div>
+                                <div className="location-text">건물 1층</div>
+                            </div>
+                            <div className="location-item">
+                                <div className="location-number">2</div>
+                                <div className="location-text">건물 3층</div>
+                            </div>
+                            <div className="location-item">
+                                <div className="location-number">3</div>
+                                <div className="location-text">건물 뒤 컨테이너 박스 앞</div>
+                            </div>
+                            <div className="location-item">
+                                <div className="location-number">4</div>
+                                <div className="location-text">농장</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    {/* 구분선 */}
+                    <div className="section-divider"></div>
+                    
                     {Object.entries(boothData).map(([categoryKey, category]) => (
                         <div key={categoryKey} className="booth-category-section">
                             <div className="category-header">
                                 <h3 className="category-title noto-sans-kr-bold">{category.title}</h3>
                             </div>
-                            <p className="category-description">{category.description}</p>
+                            <p className="category-description noto-sans-kr-medium">{category.description}</p>
                             <div className="booth-list">
                                 {category.booths.map((booth) => (
-                                    <div key={booth.id} className="booth-item" onClick={() => openModal(booth)}>
+                                    <div key={booth.id} className="booth-item">
                                         <div className="booth-image">
                                             <img src={booth.image} alt={booth.title} />
                                         </div>
                                         <div className="booth-info">
-                                            <div className="booth-time">{booth.description}</div>
                                             <div className="booth-title">{booth.title}</div>
-                                            <div className="booth-location">{booth.location}</div>
+                                            <div className="booth-location">
+                                                {booth.location}
+                                            </div>
+                                            <div className="booth-details">{booth.details}</div>
+                                            {booth.items && booth.items.length > 0 && booth.items.some(item => item.trim() !== '') && (
+                                                <div className="booth-items">
+                                                    <h4>판매 항목</h4>
+                                                    <ul>
+                                                        {booth.items
+                                                            .filter(item => item.trim() !== '')
+                                                            .map((item, index) => (
+                                                                <li key={index}>{item}</li>
+                                                            ))}
+                                                    </ul>
+                                                </div>
+                                            )}
                                         </div>
                                     </div>
                                 ))}
@@ -252,28 +314,6 @@ function Booth() {
                 </div>
             </div>
 
-            {/* 모달 */}
-            {selectedBooth && (
-                <div className="booth-modal-overlay" onClick={closeModal}>
-                    <div className="booth-modal" onClick={(e) => e.stopPropagation()}>
-                        <div className="modal-header">
-                            <h3>{selectedBooth.title}</h3>
-                            <button className="modal-close" onClick={closeModal}>×</button>
-                        </div>
-                        <div className="modal-content">
-                            <p className="modal-description">{selectedBooth.details}</p>
-                            <div className="modal-items">
-                                <h4>판매 항목 / 가격:</h4>
-                                <ul>
-                                    {selectedBooth.items.map((item, index) => (
-                                        <li key={index}>{item}</li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            )}
         </div>
     );
 }
