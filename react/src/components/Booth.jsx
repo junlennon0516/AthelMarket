@@ -241,7 +241,6 @@ function Booth() {
             <div className="booth-content">
                 <div className="booth-text">
                     <h2 className="noto-sans-kr-bold">제 4차 에셀 마켓 부스</h2>
-                    <p className="noto-sans-kr-medium">다양한 부스들이 준비되어 있습니다!</p>
                     
                     {/* 부스 배치도 */}
                     <div className="booth-map-container">
