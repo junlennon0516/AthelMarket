@@ -1,6 +1,7 @@
 import React from "react";
 import './Footer.css';
 import sfgcLogo from '../assets/sfgc-logo.png';
+import './font.css';
 
 function Footer() {
     return (

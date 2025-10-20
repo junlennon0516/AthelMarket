@@ -36,18 +36,20 @@ function MarketFour() {
                     </div>
                     
                     <div className="marketfour-description">
-                        <p className="noto-sans-kr-medium">소소하지만 알차다! 재밌다! <br/>또 오고 싶은 이 곳!</p>
-                        <p className="noto-sans-kr-bold">2025년 10월 25일 오후 2:00~5:30, <br/>시흥순복음교회 에셀센터에서 만나요!</p>
+                        <p className="noto-sans-kr-bold">소소하지만 알차다! 재밌다! <br/>또 오고 싶은 이 곳!</p>
+                        <p className="noto-sans-kr-semi-bold">2025년 10월 25일 오후 2:00~5:30, <br/>시흥순복음교회 에셀센터에서 만나요!</p>
                         <p className="noto-sans-kr-medium">다양한 부스와 특별한 체험, <br/>맛있는 음식까지 준비되어 있습니다.</p>
-                        <p className="noto-sans-kr-medium">가족, 친구들과 함께 즐거운 시간을 보내세요!</p>
+                        <p className="noto-sans-kr-medium">에셀 마켓에서 가족, 연인, 친구들과<br />함께 즐거운 시간을 보내세요!</p>
                     </div>
                     
                     <div className="navigation-buttons">
                         <Link to="/booth" className="nav-button booth-button noto-sans-kr-bold">
                             🏪 부스 안내
+                            <span className="click-indicator">click!</span>
                         </Link>
                         <Link to="/qanda" className="nav-button qanda-button noto-sans-kr-bold">
                             ❓ Q&A
+                            <span className="click-indicator">click!</span>
                         </Link>
                     </div>
                 </div>
