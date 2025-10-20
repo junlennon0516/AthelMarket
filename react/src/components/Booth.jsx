@@ -122,9 +122,9 @@ function Booth() {
                 },
                 {
                     id: "dal",
-                    title: "달고나 / 칼갈이",
+                    title: "달고나",
                     location: "3. 농장",
-                    details: "추억 소환 완료! 오늘의 달고나 장인은 누구? / 헌 칼을 새 칼로 만드는 칼갈이!",
+                    details: "추억 소환 완료! 오늘의 달고나 장인은 누구? (칼갈이 부스와 함께 합니다)",
                     items: [""],
                     image: dalgonaImage
                 },
@@ -164,7 +164,7 @@ function Booth() {
                     id: "keyring",
                     title: "키링 만들기",
                     location: "3. 농장",
-                    details: "직접 만드는 키링 공방, 내 맘대로 귀여운 파츠 골라골라~ ",
+                    details: "직접 만드는 키링 공방, 내 맘대로 귀여운 파츠 골라골라~ (악세서리 부스와 함께 합니다)",
                     items: [""],
                     image: keychainImage
                 },
@@ -202,7 +202,7 @@ function Booth() {
                     id: "jewelry",
                     title: "악세서리",
                     location: "3. 농장",
-                    details: "반짝반짝 포인트 하나로 기분 UP!",
+                    details: "반짝반짝 포인트 하나로 기분 UP! (키링 만들기 부스와 함께 합니다)",
                     items: [""],
                     image: jewelryImage
                 },
@@ -226,7 +226,7 @@ function Booth() {
                     id: "knife",
                     title: "칼갈이",
                     location: "3. 농장",
-                    details: "헌 칼을 새 칼로 만드는 칼갈이!",
+                    details: "헌 칼을 새 칼로 만드는 칼갈이! (달고나 부스와 함께 합니다)",
                     items: [""],
                     image: knifeImage
                 },
