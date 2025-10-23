@@ -2,22 +2,28 @@ import React, { useState, useEffect } from 'react';
 import './DDay.css'; 
 import './font.css';
 
-// 목표 D-Day 설정: 2025년 10월 25일 00시 00분 00초
-const TARGET_DATE = new Date('2025-10-25T00:00:00').getTime();
-
 // 남은 일수를 계산하는 함수
 const calculateDaysLeft = () => {
-    // 현재 시간
-    const now = new Date().getTime();
-    // 목표 시간까지 남은 시간
-    const difference = TARGET_DATE - now;
-
-    if (difference > 0) {
-        return Math.floor(difference / (1000 * 60 * 60 * 24));
+    // 현재 날짜
+    const now = new Date();
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    
+    // 다음 토요일 찾기 (0=일요일, 6=토요일)
+    const nextSaturday = new Date(today);
+    const daysUntilSaturday = (6 - today.getDay()) % 7;
+    
+    // 만약 오늘이 토요일이라면 다음 주 토요일로 설정
+    if (daysUntilSaturday === 0) {
+        nextSaturday.setDate(today.getDate() + 7);
     } else {
-        // D-Day가 지났을 경우 0으로 설정
-        return 0;
+        nextSaturday.setDate(today.getDate() + daysUntilSaturday);
     }
+    
+    // 목표 날짜까지 남은 일수 계산
+    const timeDiff = nextSaturday.getTime() - today.getTime();
+    const daysLeft = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+    
+    return Math.max(0, daysLeft);
 };
 
 // 숫자를 두 자리 문자열로 포맷하는 함수 (예: 5 -> '05')

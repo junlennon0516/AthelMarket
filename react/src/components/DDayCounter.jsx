@@ -2,24 +2,34 @@ import React, { useState, useEffect } from 'react';
 import './DDayCounter.css'; 
 import './font.css';
 
-// 목표 D-Day 설정: 2025년 10월 25일 00시 00분 00초
-const TARGET_DATE = new Date('2025-10-25T00:00:00').getTime();
-
 // 남은 시간을 일, 시, 분, 초로 계산하는 함수
 const calculateTimeLeft = () => {
-    // 현재 시간
-    const now = new Date().getTime();
-    // 목표 시간까지 남은 시간
-    const difference = TARGET_DATE - now;
-
+    // 현재 날짜와 시간
+    const now = new Date();
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    
+    // 다음 토요일 찾기 (0=일요일, 6=토요일)
+    const nextSaturday = new Date(today);
+    const daysUntilSaturday = (6 - today.getDay()) % 7;
+    
+    // 만약 오늘이 토요일이라면 다음 주 토요일로 설정
+    if (daysUntilSaturday === 0) {
+        nextSaturday.setDate(today.getDate() + 7);
+    } else {
+        nextSaturday.setDate(today.getDate() + daysUntilSaturday);
+    }
+    
+    // 목표 날짜까지 남은 시간 계산 (밀리초)
+    const timeDiff = nextSaturday.getTime() - now.getTime();
+    
     let timeLeft = {};
-
-    if (difference > 0) {
+    
+    if (timeDiff > 0) {
         timeLeft = {
-            D: Math.floor(difference / (1000 * 60 * 60 * 24)),
-            H: Math.floor((difference / (1000 * 60 * 60)) % 24),
-            M: Math.floor((difference / 1000 / 60) % 60),
-            S: Math.floor((difference / 1000) % 60)
+            D: Math.floor(timeDiff / (1000 * 60 * 60 * 24)),
+            H: Math.floor((timeDiff / (1000 * 60 * 60)) % 24),
+            M: Math.floor((timeDiff / 1000 / 60) % 60),
+            S: Math.floor((timeDiff / 1000) % 60)
         };
     } else {
         // D-Day가 지났을 경우 0으로 설정
