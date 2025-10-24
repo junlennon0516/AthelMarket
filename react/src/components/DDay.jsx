@@ -46,7 +46,7 @@ function DDay() {
     return (
         <div className="time-block">
             {/* 계산된 남은 일수 표시 */}
-            <span className="time-value">D-{formatNumber(daysLeft)}</span>
+            <span className="time-value">D-DAY</span>
         </div>
     );
 }

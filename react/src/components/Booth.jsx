@@ -65,7 +65,7 @@ function Booth() {
                     title: "분식",
                     location: "2. 건물 1층",
                     details: "따끈한 분식 한 입이면, 행복도 덤!",
-                    items: ["떡볶이: ", "어묵: "],
+                    items: [""],
                     image: tteokImage
                 },
                 {
@@ -81,7 +81,7 @@ function Booth() {
                     title: "음료",
                     location: "4. 농장",
                     details: "시원하게 한 잔 어떠세요?",
-                    items: ["아이스아메리카노", "아이스티"],
+                    items: [""],
                     image: icedCoffeeImage
                 },
                 {
@@ -134,8 +134,8 @@ function Booth() {
                     id: "ball",
                     title: "랭킹 우주홀",
                     location: "4. 농장",
-                    details: "준비중",
-                    items: ["실력으로 우주 1등에 도전하라! "],
+                    details: "실력으로 우주 1등에 도전하라!",
+                    items: [" "],
                     image: ballImage
                 },
                 {
@@ -181,7 +181,7 @@ function Booth() {
                     title: "꽃",
                     location: "4. 농장",
                     details: "향긋한 하루, 마음까지 피어나는 꽃 한 송이",
-                    items: ["꽃"],
+                    items: [""],
                     image: flowerImage
                 },
                 {
