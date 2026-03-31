@@ -75,7 +75,21 @@ function Map({ address }) {
         level={3}
       >
         {!state.isLoading && state.center && (
-          <MapMarker position={state.center}/>
+          <MapMarker position={state.center}>
+            <div style={{ 
+              padding: '6px 10px', 
+              backgroundColor: '#008A40', 
+              color: 'white', 
+              borderRadius: '4px', 
+              fontSize: '10px',
+              fontWeight: '500',
+              whiteSpace: 'nowrap',
+              border: '1px solid rgba(255,255,255,0.3)',
+              backdropFilter: 'blur(2px)'
+            }}>
+              에셀센터
+            </div>
+          </MapMarker>
         )}
       </KakaoMap>
     </div>

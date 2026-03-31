@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Link } from 'react-router-dom'
 import './App.css';
 import React from 'react'
 import Header from './components/Header'
@@ -7,40 +7,77 @@ import HeroSection from './components/HeroSection'
 import DDayCounter from './components/DDayCounter';
 import Card from './components/Card'; 
 import Menu from './components/Menu';
-import Map from './components/Map'
 import Footer from './components/Footer'
+import Map from './components/Map'
 import Vision from './components/Vision'
 import History from './components/History'
 import Booth from './components/Booth'
 import QandA from './components/QandA'
-import axios from 'axios';
+import Plan from './components/Plan'
+import Church from './components/Church'
+import MarketFour from './components/MarketFour'
+import Loading from './components/Loading'
 
-import jikImage from './assets/image.jpg';
+import boothImage from './assets/image.jpg';
+import churchImage from './assets/church.png';
+import VisionImage from './assets/main/main-1.jpg';
+import HistoryImage from './assets/main/main-2.jpg';
+import planImage from './assets/target.png';
+import QandAImage from './assets/QandA.png';
+import main1 from './assets/main/main-1.jpg';
+import main2 from './assets/main/main-2.jpg';
+import main3 from './assets/main/main-3.jpg';
 
 // 홈 컴포넌트
 function Home() {
   // 메뉴 열림/닫힘 상태 관리
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // 백엔드에서 받아온 데이터를 저장할 state
-  const [backendMessage, setBackendMessage] = useState('');
+  // 로딩 상태 관리
+  const [isLoading, setIsLoading] = useState(true);
 
   const toggleMenu = () => {
     setIsMenuOpen(prev => !prev);
   }
 
-  // 백엔드 API 연동 테스트
+  // 이미지 프리로딩
   useEffect(() => {
-    // 백엔드 API를 호출
-    axios.get('http://localhost:8080/api/hello')
-      .then(response => {
-        // 성공적으로 데이터를 받아오면 message state를 업데이트
-        setBackendMessage(response.data.message);
-      })
-      .catch(error => {
-        console.error("데이터를 불러오는 중 에러 발생!", error);
-        setBackendMessage('백엔드 연결 실패');
-      });
-  }, []); // 빈 배열을 전달하여 최초 렌더링 시에만 실행되도록 설정
+    const images = [
+      VisionImage,
+      churchImage,
+      boothImage,
+      QandAImage,
+      HistoryImage,
+      planImage,
+      // HeroSection의 main 이미지들
+      main1,
+      main2,
+      main3
+    ];
+
+    let loadedCount = 0;
+    const totalImages = images.length;
+
+    const handleImageLoad = () => {
+      loadedCount++;
+      if (loadedCount === totalImages) {
+        // 모든 이미지가 로드되면 0.5초 후에 로딩 완료
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 500);
+      }
+    };
+
+    images.forEach(src => {
+      const img = new Image();
+      img.onload = handleImageLoad;
+      img.onerror = handleImageLoad; // 에러가 발생해도 로딩 완료로 처리
+      img.src = src;
+    });
+  }, []);
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   return (
     <div className='app-container'>
@@ -50,43 +87,43 @@ function Home() {
       {/* 메인 타이틀 & D-Day 영역*/}
       <HeroSection />
 
-      {/* 백엔드 연동 테스트 영역 */}
-      <div style={{ 
-        padding: '20px', 
-        margin: '20px', 
-        backgroundColor: '#f0f0f0', 
-        borderRadius: '8px',
-        textAlign: 'center'
-      }}>
-        <h2>백엔드 연동 테스트</h2>
-        <p>백엔드에서 받은 메시지: <strong>{backendMessage}</strong></p>
-      </div>
-
       {/* 하단 카드 영역 */}
       <div className='content-cards'>
         <Card 
-          title="에셀 소개"
+          title="에셀 마켓 소개"
           description="에셀 마켓의 의미와 비전을 소개합니다"
-          imageUrl={jikImage}
+          imageUrl={VisionImage}
           linkTo="/vision"
         />
         <Card 
-          title="지난 에셀 마켓"
-          description="지난 에셀 마켓의 기록을 확인해보세요"
-          imageUrl={jikImage}
-          linkTo="/history"
+          title="교회 소개"
+          description="시흥순복음교회와 교회의 비전을 소개합니다"
+          imageUrl={churchImage}
+          linkTo="/church"
         />
         <Card 
           title="부스 안내"
           description="에셀 마켓의 다양한 부스 정보를 확인해보세요"
-          imageUrl={jikImage}
+          imageUrl={boothImage}
           linkTo="/booth"
         />
         <Card 
           title="Q&A"
           description="자주 묻는 질문을 확인해보세요"
-          imageUrl={jikImage}
+          imageUrl={QandAImage}
           linkTo="/qanda"
+        />
+        <Card 
+          title="지난 에셀 마켓"
+          description="지난 에셀 마켓의 기록을 확인해보세요"
+          imageUrl={HistoryImage}
+          linkTo="/history"
+        />
+        <Card 
+          title="에셀 계획"
+          description="앞으로 에셀 마켓의 계획"
+          imageUrl={planImage}
+          linkTo="/plan"
         />
       </div>
 
@@ -108,6 +145,9 @@ function App() {
       <Route path="/history" element={<History />} />
       <Route path="/booth" element={<Booth />} />
       <Route path="/qanda" element={<QandA />} />
+      <Route path="/church" element={<Church />} />
+      <Route path="/plan" element={<Plan />} />
+      <Route path="/marketfour" element={<MarketFour />} />
     </Routes>
   );
 }

@@ -10,7 +10,7 @@ function Card({ title, description, imageUrl, linkTo}) {
                 <div className="card-image-area" style={{ backgroundImage: `url(${imageUrl})`}}>
                 </div>
                 <div className="card-content">
-                    <h2 className="card-title noto-sans-kr-medium">{title}</h2>
+                    <h2 className="card-title noto-sans-kr-semi-bold">{title}</h2>
                     <p className="card-description noto-sans-kr-regular">{description}</p>
                 </div>
                 

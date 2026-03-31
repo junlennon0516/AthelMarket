@@ -1,9 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './QandA.css';
+import './font.css';
 
 function QandA() {
     const [openFAQ, setOpenFAQ] = useState(null);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const faqs = [
         {
@@ -19,12 +24,22 @@ function QandA() {
         {
             id: 3,
             question: "부스 운영 시간은 어떻게 되나요?",
-            answer: "오전 10시부터 오후 6시까지 운영됩니다."
+            answer: "오후 2시부터 오후 5시 30분까지 운영됩니다."
         },
         {
             id: 4,
             question: "주차는 가능한가요?",
-            answer: "주차 공간이 제한적이므로 대중교통 이용을 권장합니다."
+            answer: "주차장이 따로 마련되어 있지 않습니다. 주변 아파트나 공용주차장을 사용하시거나 대중교통 또는 도보이동 해주시기 바랍니다."
+        },
+        {
+            id: 5,
+            question: "부스 이용시 결제는 어떻게 하나요?",
+            answer: "신용카드 거래 불가능하고 계좌이체 또는 현금결제만 가능합니다."
+        },
+        {
+            id: 6,
+            question: "다음 에셀 마켓은 언제 개최하나요?",
+            answer: "다음 에셀 마켓 일정이 확정될 때마다 해당 사이트의 '에셀 계획' 페이지에 공지할 예정입니다."
         }
     ];
 
@@ -41,7 +56,7 @@ function QandA() {
                         <path d="M15.41 7.41L14 6L8 12L14 18L15.41 16.59L10.83 12L15.41 7.41Z" fill="currentColor"/>
                     </svg>
                 </Link>
-                <h1 className="qanda-header-title">Q&A</h1>
+                <h1 className="qanda-header-title noto-sans-kr-bold">Q&A</h1>
                 <div className="header-spacer"></div>
             </header>
 
@@ -70,6 +85,11 @@ function QandA() {
                                 )}
                             </div>
                         ))}
+                    </div>
+                    
+                    <div className="contact-info">
+                        <span className="contact-label noto-sans-kr-bold">기타 문의</span>
+                        <span className="contact-phone noto-sans-kr-bold">T. 031-317-5017</span>
                     </div>
                 </div>
             </div>

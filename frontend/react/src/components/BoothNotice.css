@@ -1,0 +1,46 @@
+.booth-notice-card {
+    background: #ffffff;
+    border: 2px dashed #008a40;
+    border-radius: 16px;
+    padding: 28px 20px;
+    margin-top: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.booth-notice-badge {
+    display: inline-block;
+    background-color: #008a40;
+    color: #ffffff;
+    font-size: 13px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    margin: 0 0 14px 0;
+    letter-spacing: 0.3px;
+}
+
+.booth-notice-title {
+    color: #008a40;
+    font-size: 24px;
+    margin: 0 0 12px 0;
+}
+
+.booth-notice-description {
+    color: #444444;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .booth-notice-card {
+        padding: 22px 16px;
+    }
+
+    .booth-notice-title {
+        font-size: 20px;
+    }
+
+    .booth-notice-description {
+        font-size: 14px;
+    }
+}
