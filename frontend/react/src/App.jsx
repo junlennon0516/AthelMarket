@@ -35,6 +35,7 @@ function Home() {
   // 로딩 상태 관리
   const [isLoading, setIsLoading] = useState(true);
 
+  // 홈 화면의 메뉴 토글 핸들러
   const toggleMenu = () => {
     setIsMenuOpen(prev => !prev);
   }
