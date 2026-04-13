@@ -33,7 +33,7 @@ function MarketFour() {
                     
                     <div className="marketfour-description">
                         <p className="noto-sans-kr-bold">따뜻한 봄날, 함께 모여 즐기는 에셀 마켓!</p>
-                        <p className="noto-sans-kr-semi-bold">2026년 4월 25일(토) 오후 2:00~5:30, <br/>시흥순복음교회 에셀센터에서 만나요!</p>
+                        <p className="noto-sans-kr-semi-bold">2026년 4월 25일(토) 낮 12시 30분~저녁 6시, <br/>시흥순복음교회 에셀센터에서 만나요!</p>
                         <p className="noto-sans-kr-medium">다양한 부스와 특별한 체험, <br/>맛있는 음식까지 준비되어 있습니다.</p>
                         <p className="noto-sans-kr-medium">에셀 마켓에서 가족, 연인, 친구들과<br />함께 즐거운 시간을 보내세요!</p>
                     </div>
