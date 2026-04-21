@@ -157,6 +157,37 @@
     margin-top: 5px;
 }
 
+.animal-experience-notice {
+    margin: 14px 12px 18px;
+    padding: 20px 16px 24px;
+    background-color: #f6fff0;
+    border: 2px solid #bfe2a6;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(31, 59, 22, 0.08);
+    text-align: center;
+}
+
+.animal-experience-notice h3 {
+    margin: 0 0 10px;
+    color: #008a40;
+    font-size: clamp(18px, 4.6vw, 24px);
+}
+
+.animal-experience-notice p {
+    margin: 6px 0;
+    color: #1f3b16;
+    line-height: 1.5;
+    font-size: clamp(14px, 3.7vw, 17px);
+}
+
+.notice-highlight {
+    color: #008a40;
+    font-weight: 800;
+    background-color: #e6f6d8;
+    border-radius: 8px;
+    padding: 2px 8px;
+}
+
 @media (min-width: 640px) {
     .hero-section {
         padding: 0;
@@ -172,6 +203,10 @@
     }
     .date-location {
         font-size: 20px;
+    }
+    .animal-experience-notice {
+        margin: 16px 16px 20px;
+        padding: 24px 20px 28px;
     }
 }
 
@@ -190,6 +225,10 @@
     }
     .date-location {
         font-size: 24px;
+    }
+    .animal-experience-notice {
+        margin: 18px 20px 24px;
+        padding: 26px 24px 30px;
     }
 }
 

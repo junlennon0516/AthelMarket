@@ -19,6 +19,8 @@ import facePaintingImage from '../assets/booth_icons/face-paint.png';
 import lettuceImage from '../assets/booth_icons/lettuce.png';
 import plantpotImage from '../assets/booth_icons/plant-pot.png';
 import stationeryImage from '../assets/booth_icons/stationery.png';
+import penImage from '../assets/booth_icons/pen.png';
+import clothesImage from '../assets/booth_icons/clothes.png';
 
 
 function Booth() {
@@ -70,7 +72,13 @@ function Booth() {
                     id: "snack",
                     title: "분식",
                     details: "배고픔 해결은 여기서!",
-                    items: ["떡볶이", "어묵"],
+                    items: [
+                        "떡볶이 3,000원",
+                        "순대 4,000원",
+                        "만두 2개 1,000원",
+                        "떡꼬치 1개 1,000원",
+                        "어묵 1개 1,000원 / 3개 2,000원"
+                    ],
                     image: tteokImage
                 },
                 {
@@ -91,21 +99,42 @@ function Booth() {
                     id: "jeon",
                     title: "전",
                     details: "고소한 전 냄새 가득!",
-                    items: ["김치전", "미나리새우전"],
+                    items: ["김치전 4,000원", "미나리새우전 6,000원"],
                     image: pancakeImage
                 },
                 {
                     id: "kimchi",
-                    title: "김치류·반찬류",
-                    details: "손맛이 살아있다! 밥 한 그릇 뚝딱!",
-                    items: [],
+                    title: "장금이네",
+                    details: "손맛이 살아있는 반찬과 김치! 밥 한 그릇 뚝딱!",
+                    items: [
+                        "김치",
+                        "백김치",
+                        "오이소박이",
+                        "쪽파김치",
+                        "배추겉절이",
+                        "알타리김치",
+                        "도라지무침",
+                        "양념깻잎",
+                        "멸치볶음",
+                        "진미채",
+                        "마른새우볶음",
+                        "연근조림",
+                        "잡채"
+                    ],
                     image: lunchBoxImage
                 },
                 {
                     id: "drink",
                     title: "음료·뻥튀기",
                     details: "시원한 음료와 바삭바삭 뻥튀기",
-                    items: ["아메리카노", "아이스티"],
+                    items: [
+                        "아이스 아메리카노 2,000원",
+                        "아이스티 1,500원",
+                        "옛날커피 2,000원",
+                        "캔음료 1,000원",
+                        "생수 700원",
+                        "뻥튀기 1봉지 2,000원"
+                    ],
                     image: drinkImage
                 }
             ]
@@ -138,6 +167,12 @@ function Booth() {
                     details: "세상에 하나뿐인 나만의 키링을 만들어보세요!",
                     image: keychainImage
                 },
+                {
+                    id: "pen-customizing",
+                    title: "볼꾸(불펜꾸미기)",
+                    details: "내 취향대로 꾸미는 세상 하나뿐인 볼펜!",
+                    image: penImage
+                },
             ]
         },
         sale: {
@@ -148,13 +183,17 @@ function Booth() {
                     id: "socks",
                     title: "양말",
                     details: "발끝까지 스타일 완성!",
+                    items: [
+                        "양말, 속옷 등 다양한 잡화",
+                        "100% 국산 제품"
+                    ],
                     image: socksImage
                 },
                 {
                     id: "misc-jeon",
                     title: "잡화",
                     details: "실속 있는 잡화 다 모였다!",
-                    items: [],
+                    items: ["티셔츠 등 다양한 잡화"],
                     image: stationeryImage
                 },
                 {
@@ -165,11 +204,18 @@ function Booth() {
                     image: keychainImage
                 },
                 {
-                    id: "keyring-etc",
+                    id: "plantpot",
                     title: "화분",
                     details: "힐링, 화분 한 개로 시작!",
                     items: ["화분"],
                     image: plantpotImage
+                },
+                {
+                    id: "vintage-daiso",
+                    title: "빈티지다이쏘(구제샵)",
+                    details: "득템의 재미! 다양한 구제 아이템을 만나보세요.",
+                    items: ["구제 의류", "빈티지 잡화"],
+                    image: clothesImage
                 },
             ]
         }
