@@ -63,9 +63,9 @@ function Booth() {
                 },
                 {
                     id: "dalgona-waffle",
-                    title: "달고나·와플",
-                    details: "달콤한 옛 추억과 바삭한 와플",
-                    items: ["달고나", "와플"],
+                    title: "달고나",
+                    details: "달콤한 옛 추억!",
+                    items: ["달고나"],
                     image: [dalgonaImage, waffleImage]
                 },
                 {

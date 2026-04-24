@@ -44,10 +44,13 @@ function HeroSection() {
             <section className="animal-experience-notice">
                 <h3 className="noto-sans-kr-bold">동물체험 안내</h3>
                 <p className="noto-sans-kr-medium">
-                    동물체험 오픈시간은 오후 <span className="notice-highlight">1시-5시</span> 입니다.
+                    동물체험 오픈시간은 오후 <span className="notice-highlight">2시-5시</span> 입니다.
                 </p>
                 <p className="noto-sans-kr-medium">
-                    1타임은 15분 진행되며, <span className="notice-highlight">체험비 7천원</span> 입니다.
+                    1타임은 15분 진행되며, <span className="notice-highlight">1타임당 선착순 10명</span> 입니다.
+                </p>
+                <p>
+                    <span className="notice-highlight">체험비는 7천원</span> 입니다.
                 </p>
                 <p className="noto-sans-kr-medium">
                     당일 해당 부스에서 원하는 시간대로 예약 가능합니다.
