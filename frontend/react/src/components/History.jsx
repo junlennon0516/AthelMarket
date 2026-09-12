@@ -8,6 +8,8 @@ import Loading from './Loading';
 import poster1 from '../assets/poster/poster-1.jpg';
 import poster2 from '../assets/poster/poster-2.jpg';
 import poster3 from '../assets/poster/poster-3.jpg';
+import poster4 from '../assets/poster/poster-4.png';
+import poster5 from '../assets/poster/poster-2026-04.png';
 
 // 히스토리 사진들 import (나중에 실제 사진으로 교체)
 import history1_1 from '../assets/history/history-1/5N3A1454.jpg';
@@ -123,7 +125,9 @@ function History() {
             { src: history3_8, alt: "3차 에셀 마켓 사진 8" },
             { src: history3_9, alt: "3차 에셀 마켓 사진 9" },
             { src: history3_10, alt: "3차 에셀 마켓 사진 10" }
-        ]
+        ],
+        4: [],
+        5: []
     };
 
     const historyData = {
@@ -156,6 +160,26 @@ function History() {
                 "또 한 번 많은 사람들에게 즐거움을 선사했습니다.",
             ],
             image: poster3
+        },
+        4: {
+            title: "4차 에셀 마켓",
+            date: "2025년 10월",
+            description: [
+                "소소하지만 알차다! 재밌다! 또 오고 싶은 이 곳!",
+                "다양한 먹거리와 즐길 거리로 가득했던",
+                "제 4차 에셀 마켓의 순간들입니다."
+            ],
+            image: poster4
+        },
+        5: {
+            title: "5차 에셀 마켓",
+            date: "2026년 4월",
+            description: [
+                "어흥~ 동물체험!",
+                "귀여운 동물들과 함께하는 이색체험 플리마켓,",
+                "제 5차 에셀 마켓이 봄날을 가득 채웠습니다."
+            ],
+            image: poster5
         }
     };
 
@@ -193,12 +217,26 @@ function History() {
                 >
                     2차 에셀 마켓
                 </button>
-                <button 
+                <button
                     className={`tab-button ${activeTab === 3 ? 'active' : ''}`}
                     onClick={() => handleTabChange(3)}
                     disabled={isLoading}
                 >
                     3차 에셀 마켓
+                </button>
+                <button
+                    className={`tab-button ${activeTab === 4 ? 'active' : ''}`}
+                    onClick={() => handleTabChange(4)}
+                    disabled={isLoading}
+                >
+                    4차 에셀 마켓
+                </button>
+                <button
+                    className={`tab-button ${activeTab === 5 ? 'active' : ''}`}
+                    onClick={() => handleTabChange(5)}
+                    disabled={isLoading}
+                >
+                    5차 에셀 마켓
                 </button>
             </div>
 
@@ -238,12 +276,14 @@ function History() {
                                     <div className="loading-spinner"></div>
                                     <p className="loading-text noto-sans-kr-medium">사진을 불러오는 중...</p>
                                 </div>
+                            ) : historyPhotos[activeTab].length === 0 ? (
+                                <p className="photos-empty noto-sans-kr-medium">추억의 사진을 준비 중입니다.</p>
                             ) : (
                                 <div className="history-photos-grid">
                                     {historyPhotos[activeTab].map((photo, index) => (
                                         <div key={index} className="history-photo-item">
-                                            <img 
-                                                src={photo.src} 
+                                            <img
+                                                src={photo.src}
                                                 alt={photo.alt}
                                                 className="history-photo"
                                                 onLoad={() => handleImageLoad(activeTab)}

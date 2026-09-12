@@ -66,12 +66,21 @@
     left: 0;
     right: 0;
     display: flex;
+    flex-wrap: nowrap;
     justify-content: center;
+    justify-content: safe center;
     background-color: none;
     backdrop-filter: blur(10px);
     z-index: 999;
     padding: 20px;
     gap: 16px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.history-tabs::-webkit-scrollbar {
+    display: none;
 }
 
 .tab-button {
@@ -297,6 +306,14 @@
     margin: 0;
 }
 
+/* 아직 사진이 없는 경우 안내 문구 */
+.photos-empty {
+    text-align: center;
+    color: #b8ab8f;
+    font-size: 15px;
+    padding: 30px 20px;
+}
+
 /* 탭 버튼 비활성화 스타일 */
 .tab-button:disabled {
     opacity: 0.6;
@@ -422,16 +439,15 @@
 
 @media (max-width: 480px) {
     .history-tabs {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         gap: 8px;
         padding: 12px;
     }
-    
+
     .tab-button {
         padding: 8px 12px;
         font-size: 12px;
-        flex: 1;
-        min-width: 0;
+        flex: 0 0 auto;
     }
     
     .history-content {
