@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './MarketFour.css';
 import './font.css';
-import posterImage1 from '../assets/poster/poster-2026-04.png';
+import posterImage1 from '../assets/poster/poster-26-10.jpeg';
 
 function MarketFour() {
     // 페이지가 로드될 때 맨 위로 스크롤
@@ -18,22 +18,22 @@ function MarketFour() {
                         <path d="M15.41 7.41L14 6L8 12L14 18L15.41 16.59L10.83 12L15.41 7.41Z" fill="currentColor"/>
                     </svg>
                 </Link>
-                <h1 className="marketfour-header-title noto-sans-kr-bold">제 4차 에셀 마켓</h1>
+                <h1 className="marketfour-header-title noto-sans-kr-bold">제 6회 에셀 마켓</h1>
                 <div className="header-spacer"></div>
             </header>
 
             {/* 메인 콘텐츠 */}
             <div className="marketfour-content">
                 <div className="marketfour-text">
-                    <h1 className="marketfour-main-title noto-sans-kr-bold">제 4차 에셀 마켓</h1>
+                    <h1 className="marketfour-main-title noto-sans-kr-bold">제 6회 에셀 마켓</h1>
                     
                     <div className="poster-container">
                         <img src={posterImage1} alt="제 4차 에셀 마켓 포스터" className="poster-image" />
                     </div>
                     
                     <div className="marketfour-description">
-                        <p className="noto-sans-kr-bold">따뜻한 봄날, 함께 모여 즐기는 에셀 마켓!</p>
-                        <p className="noto-sans-kr-semi-bold">2026년 4월 25일(토) 낮 12시 30분~저녁 6시, <br/>시흥순복음교회 에셀센터에서 만나요!</p>
+                        <p className="noto-sans-kr-bold">선선한 가을날, 함께 모여 즐기는 에셀 마켓!</p>
+                        <p className="noto-sans-kr-semi-bold">2026년 10월 17일(토) 낮 12시~저녁 5시, <br/>시흥순복음교회 에셀센터에서 만나요!</p>
                         <p className="noto-sans-kr-medium">다양한 부스와 특별한 체험, <br/>맛있는 음식까지 준비되어 있습니다.</p>
                         <p className="noto-sans-kr-medium">에셀 마켓에서 가족, 연인, 친구들과<br />함께 즐거운 시간을 보내세요!</p>
                     </div>

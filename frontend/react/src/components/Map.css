@@ -8,7 +8,7 @@
 }
 
 .map-header {
-    background: linear-gradient(135deg, #7ebf35 0%, #008a40 100%);
+    background: linear-gradient(135deg, #cfc9b8 0%, #f4f1e6 100%);
     border-radius: 12px;
     padding: 12px 20px;
     width: 120px;
@@ -16,12 +16,12 @@
     text-align: center;
 
     font-size: 18px;
-    color: white;
+    color: #262218;
 }
 
 .map-address {
     font-size: 14px;
-    color: #3B3B3B;
+    color: #ecdfc0;
     line-height: 1.6;
     margin-bottom: 16px;
 }
@@ -33,18 +33,18 @@
 .map-placeholder {
     width: 100%;
     height: 200px;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    border: 2px dashed #dee2e6;
+    background: linear-gradient(135deg, #443c34 0%, #5c5142 100%);
+    border: 2px dashed #4a3c28;
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
 }
 
 .map-placeholder-content {
     text-align: center;
-    color: #6c757d;
+    color: #a89a7a;
 }
 
 .map-placeholder-icon {
@@ -58,6 +58,6 @@
 }
 
 .map-placeholder-text strong {
-    color: #008a40;
+    color: #f4f1e6;
     font-weight: bold;
 }

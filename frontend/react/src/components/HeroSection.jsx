@@ -5,7 +5,7 @@ import './HeroSection.css';
 import './font.css';
 
 // 이미지 import
-import mainPoster from '../assets/poster/poster-2026-04.png';
+import mainPoster from '../assets/poster/poster-26-10.jpeg';
 
 function HeroSection() {
     return(
@@ -20,7 +20,7 @@ function HeroSection() {
                         에셀 마켓
                     </h1>
                     <p className="date-location noto-sans-kr-semi-bold">
-                        2026.04.25(토) <br/>낮 12:30~저녁 6:00
+                        2026.10.17(토) <br/>낮 12:00~저녁 5:00
                     </p>
                 </div>
                 */}
@@ -30,7 +30,7 @@ function HeroSection() {
             <div className="dday-wrapper">
                 <div className="dday-label-container">
                     <p className="dday-label noto-sans-kr-bold">D-day</p>
-                    <p className="date-label noto-sans-kr-bold">2026.04.25(토)</p>
+                    <p className="date-label noto-sans-kr-bold">2026.10.17(토)</p>
                 </div>
                 <div className="dday-container">
                     <DDay/>
@@ -40,22 +40,6 @@ function HeroSection() {
                     </Link>
                 </div>
             </div>
-
-            <section className="animal-experience-notice">
-                <h3 className="noto-sans-kr-bold">동물체험 안내</h3>
-                <p className="noto-sans-kr-medium">
-                    동물체험 오픈시간은 오후 <span className="notice-highlight">2시-5시</span> 입니다.
-                </p>
-                <p className="noto-sans-kr-medium">
-                    1타임은 15분 진행되며, <span className="notice-highlight">1타임당 선착순 10명</span> 입니다.
-                </p>
-                <p>
-                    <span className="notice-highlight">체험비는 7천원</span> 입니다.
-                </p>
-                <p className="noto-sans-kr-medium">
-                    당일 해당 부스에서 원하는 시간대로 예약 가능합니다.
-                </p>
-            </section>
         </>
     );
 }

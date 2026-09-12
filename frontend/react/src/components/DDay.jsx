@@ -8,8 +8,8 @@ const calculateDaysLeft = () => {
     const now = new Date();
     const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
 
-    // 행사 기준일: 2026-04-25(토)
-    const targetDate = new Date(2026, 3, 25);
+    // 행사 기준일: 2026-10-17(토)
+    const targetDate = new Date(2026, 9, 17);
     
     // 목표 날짜까지 남은 일수 계산
     const timeDiff = targetDate.getTime() - today.getTime();

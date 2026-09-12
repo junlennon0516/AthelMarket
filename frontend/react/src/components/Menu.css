@@ -22,9 +22,9 @@
     right: 0;
     width: min(500px, 70vw);
     height: 100%;
-    background-color: #ffff84;
+    background-color: #39342e;
     padding: 20px;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.6);
     color: white;
 
     transform: translateX(100%);
@@ -48,7 +48,7 @@
     background: none;
     border: none;
     font-size: 30px;
-    color: black;
+    color: #ecdfc0;
     cursor: pointer;
 }
 
@@ -60,20 +60,20 @@
 }
 
 .menu-item {
-    background-color: #7ebf35;
+    background-color: #cfc9b8;
     padding: 12px 15px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
     text-align: left;
     text-decoration: none;
-    color: #3B3B3B;
+    color: #262218;
     display: block;
     transition: all 0.3s ease;
 }
 
 .menu-item:hover {
-    background-color: #008a40;
+    background-color: #f4f1e6;
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.55);
 }
