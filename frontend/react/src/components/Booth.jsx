@@ -3,25 +3,25 @@ import { Link } from 'react-router-dom';
 import './Booth.css';
 import './font.css';
 import tteokImage from '../assets/booth_icons/tteok.png';
-import pancakeImage from '../assets/booth_icons/pancake.png';
 import skewerImage from '../assets/booth_icons/skewer.png';
 import cottonCandyImage from '../assets/booth_icons/cotton-candy.png';
 import socksImage from '../assets/booth_icons/socks.png';
-import baseballImage from '../assets/booth_icons/baseball.png';
 import dalgonaImage from '../assets/booth_icons/dalgona.png';
 import keychainImage from '../assets/booth_icons/keychain.png';
-import lunchBoxImage from '../assets/booth_icons/lunch-box.png';
-import iceCreamImage from '../assets/booth_icons/ice-cream.png';
+import kimchiImage from '../assets/booth_icons/kimchi-jar.svg';
 import noodleImage from '../assets/booth_icons/noodles.png';
-import drinkImage from '../assets/booth_icons/drink.png';
 import waffleImage from '../assets/booth_icons/waffle.png';
 import facePaintingImage from '../assets/booth_icons/face-paint.png';
-import lettuceImage from '../assets/booth_icons/lettuce.png';
-import plantpotImage from '../assets/booth_icons/plant-pot.png';
-import stationeryImage from '../assets/booth_icons/stationery.png';
-import penImage from '../assets/booth_icons/pen.png';
 import clothesImage from '../assets/booth_icons/clothes.png';
 
+import potatoImage from '../assets/booth_icons/potato.png';
+import sweetPotatoImage from '../assets/booth_icons/sweet-potato.svg';
+import pancakeImage from '../assets/booth_icons/pancake.png';
+import drinkImage from '../assets/booth_icons/drink.png';
+import keycapSlimeImage from '../assets/booth_icons/keycap-slime.svg';
+import balloonDartsImage from '../assets/booth_icons/balloon-darts.svg';
+import perfumeImage from '../assets/booth_icons/perfume.svg';
+import rouletteImage from '../assets/booth_icons/roulette.svg';
 
 function Booth() {
 
@@ -43,180 +43,223 @@ function Booth() {
     }, []);
 
     const boothData = {
-        food: {
-            title: "푸드존",
-            description: "먹고, 또 먹고, 그래도 먹고 싶은 맛집 총출동!",
-            booths: [
+        "food": {
+            "title": "푸드존",
+            "description": "맛있는 먹거리와 달콤한 간식을 만나보세요!",
+            "booths": [
                 {
-                    id: "candy",
-                    title: "솜사탕",
-                    details: "달콤한 구름 한 입",
-                    items: [],
-                    image: cottonCandyImage
-                },
-                {
-                    id: "naengmyeon",
-                    title: "냉면",
-                    details: "여더위? 한 그릇이면 끝.",
-                    items: ["비빔냉면", "물냉면"],
-                    image: noodleImage
-                },
-                {
-                    id: "dalgona-waffle",
-                    title: "달고나",
-                    details: "달콤한 옛 추억!",
-                    items: ["달고나"],
-                    image: [dalgonaImage, waffleImage]
-                },
-                {
-                    id: "snack",
-                    title: "분식",
-                    details: "배고픔 해결은 여기서!",
-                    items: [
-                        "떡볶이 3,000원",
-                        "순대 4,000원",
-                        "만두 2개 1,000원",
-                        "떡꼬치 1개 1,000원",
-                        "어묵 1개 1,000원 / 3개 2,000원"
+                    "id": "food-1",
+                    "title": "솜사탕 · 회오리감자",
+                    "details": "달콤한 구름 한 입, 바삭한 감자 한 꼬치!",
+                    "items": [
+                        "솜사탕",
+                        "회오리감자"
                     ],
-                    image: tteokImage
+                    "itemLabel": "메뉴",
+                    "images": [
+                        cottonCandyImage,
+                        potatoImage
+                    ]
                 },
                 {
-                    id: "skewer",
-                    title: "꼬치구이",
-                    details: "한 입 쏙! 불향 가득 꼬치구이",
-                    items: [],
-                    image: skewerImage
-                },
-                {
-                    id: "yogurt",
-                    title: "요아정 (요거트 아이스크림)",
-                    details: "시원달콤 요거트 아이스크림으로 마무리!",
-                    items: [],
-                    image: iceCreamImage
-                },
-                {
-                    id: "jeon",
-                    title: "전",
-                    details: "고소한 전 냄새 가득!",
-                    items: ["김치전 4,000원", "미나리새우전 6,000원"],
-                    image: pancakeImage
-                },
-                {
-                    id: "kimchi",
-                    title: "장금이네",
-                    details: "손맛이 살아있는 반찬과 김치! 밥 한 그릇 뚝딱!",
-                    items: [
-                        "김치",
-                        "백김치",
-                        "오이소박이",
-                        "쪽파김치",
-                        "배추겉절이",
-                        "알타리김치",
-                        "도라지무침",
-                        "양념깻잎",
-                        "멸치볶음",
-                        "진미채",
-                        "마른새우볶음",
-                        "연근조림",
-                        "잡채"
+                    "id": "food-2",
+                    "title": "냉면",
+                    "details": "시원한 냉면! 취향대로 물냉면, 비빔냉면!",
+                    "items": [
+                        "물냉면",
+                        "비빔냉면"
                     ],
-                    image: lunchBoxImage
+                    "itemLabel": "메뉴",
+                    "image": noodleImage
                 },
                 {
-                    id: "drink",
-                    title: "음료·뻥튀기",
-                    details: "시원한 음료와 바삭바삭 뻥튀기",
-                    items: [
-                        "아이스 아메리카노 2,000원",
-                        "아이스티 1,500원",
-                        "옛날커피 2,000원",
-                        "캔음료 1,000원",
-                        "생수 700원",
-                        "뻥튀기 1봉지 2,000원"
+                    "id": "food-3",
+                    "title": "달고나 · 호떡",
+                    "details": "달콤한 추억과 따끈한 간식 한 입!",
+                    "items": [
+                        "달고나",
+                        "호떡"
                     ],
-                    image: drinkImage
+                    "itemLabel": "메뉴",
+                    "images": [
+                        dalgonaImage,
+                        pancakeImage
+                    ]
+                },
+                {
+                    "id": "food-4",
+                    "title": "분식집",
+                    "details": "이것저것 골라 먹는 분식 한 상!",
+                    "items": [
+                        "꼬마김밥",
+                        "오뎅",
+                        "떡볶이",
+                        "순대"
+                    ],
+                    "itemLabel": "메뉴",
+                    "image": tteokImage
+                },
+                {
+                    "id": "food-5",
+                    "title": "음료 · 뻥튀기",
+                    "details": "시원하게 한 모금, 바삭하게 한 입!",
+                    "items": [
+                        "음료(커피, 에이드 외)",
+                        "뻥튀기"
+                    ],
+                    "itemLabel": "메뉴",
+                    "image": drinkImage
+                },
+                {
+                    "id": "food-6",
+                    "title": "국산 먹거리",
+                    "details": "김치부터 식혜까지, 모두 국산으로 준비했어요!",
+                    "items": [
+                        "김치류",
+                        "참기름",
+                        "들기름",
+                        "식혜"
+                    ],
+                    "itemLabel": "메뉴",
+                    "image": kimchiImage
+                },
+                {
+                    "id": "food-7",
+                    "title": "전통 장터",
+                    "details": "깊고 구수한 맛으로 밥상을 채워보세요!",
+                    "items": [
+                        "된장",
+                        "고추장",
+                        "청국장"
+                    ],
+                    "itemLabel": "메뉴",
+                    "image": kimchiImage
+                },
+                {
+                    "id": "food-8",
+                    "title": "꼬치구이",
+                    "details": "한 입 쏙! 맛있는 꼬치를 즐겨보세요!",
+                    "items": [
+                        "꼬치(양꼬치 외)"
+                    ],
+                    "itemLabel": "메뉴",
+                    "image": skewerImage
+                },
+                {
+                    "id": "food-9",
+                    "title": "와플",
+                    "details": "달콤한 와플로 기분 좋은 간식 시간!",
+                    "items": [
+                        "와플"
+                    ],
+                    "itemLabel": "메뉴",
+                    "image": waffleImage
                 }
             ]
         },
-        game: {
-            title: "놀이/체험존",
-            description: "아이도 어른도 함께 웃는 즐거운 체험들!",
-            booths: [
+        "shopping": {
+            "title": "쇼핑존",
+            "description": "고르는 재미 가득한 작은 가게들!",
+            "booths": [
                 {
-                    id: "baseball",
-                    title: "야구공 던지기",
-                    details: "스트라이크 한 방에 상품이 짠!",
-                    image: baseballImage
+                    "id": "shopping-1",
+                    "title": "양말 가게",
+                    "details": "발끝까지 기분 좋게, 마음에 드는 양말을 골라보세요!",
+                    "items": [
+                        "양말"
+                    ],
+                    "itemLabel": "판매 품목",
+                    "image": socksImage
                 },
                 {
-                    id: "face-painting",
-                    title: "페이스 페인팅",
-                    details: "예쁜 얼굴에 예쁜 그림을 그려보세요!",
-                    image: facePaintingImage
+                    "id": "shopping-2",
+                    "title": "패션잡화 · 구제샵",
+                    "details": "나만의 스타일을 찾는 득템 시간!",
+                    "items": [
+                        "패션잡화",
+                        "구제샵(중고물품)"
+                    ],
+                    "itemLabel": "판매 품목",
+                    "image": clothesImage
                 },
                 {
-                    id: "planting",
-                    title: "상추 모종 심기",
-                    details: "내 손으로 키우는 작은 농장!",
-                    image: lettuceImage
-                },
-                {
-                    id: "keychain-making",
-                    title: "키링 만들기",
-                    details: "세상에 하나뿐인 나만의 키링을 만들어보세요!",
-                    image: keychainImage
-                },
-                {
-                    id: "pen-customizing",
-                    title: "볼꾸(불펜꾸미기)",
-                    details: "내 취향대로 꾸미는 세상 하나뿐인 볼펜!",
-                    image: penImage
-                },
+                    "id": "shopping-3",
+                    "title": "키링 가게",
+                    "details": "작은 키링 하나로 나만의 포인트!",
+                    "items": [
+                        "키링"
+                    ],
+                    "itemLabel": "판매 품목",
+                    "image": keychainImage
+                }
             ]
         },
-        sale: {
-            title: "쇼핑존",
-            description: "사는 재미, 보는 재미, 고르는 재미 총집합!",
-            booths: [
+        "experience": {
+            "title": "놀이 · 체험존",
+            "description": "직접 만들고 신나게 즐기는 체험 시간!",
+            "booths": [
                 {
-                    id: "socks",
-                    title: "양말",
-                    details: "발끝까지 스타일 완성!",
-                    items: [
-                        "양말, 속옷 등 다양한 잡화",
-                        "100% 국산 제품"
+                    "id": "experience-1",
+                    "title": "향수 공방",
+                    "details": "향기로운 나만의 작품을 만들어보세요!",
+                    "items": [
+                        "향수 만들기(비누)"
                     ],
-                    image: socksImage
+                    "itemLabel": "체험 항목",
+                    "image": perfumeImage
                 },
                 {
-                    id: "misc-jeon",
-                    title: "잡화",
-                    details: "실속 있는 잡화 다 모였다!",
-                    items: ["티셔츠 등 다양한 잡화"],
-                    image: stationeryImage
+                    "id": "experience-2",
+                    "title": "키캡 · 슬라임 공방",
+                    "details": "내 취향대로 꾸미고 조물조물 만들어보세요!",
+                    "items": [
+                        "키캡 만들기",
+                        "슬라임 만들기"
+                    ],
+                    "itemLabel": "체험 항목",
+                    "image": keycapSlimeImage
                 },
                 {
-                    id: "keyring-etc",
-                    title: "키링·헤어 악세서리",
-                    details: "코디의 완성, 여기 있어요!",
-                    items: ["키링", "헤어 악세서리"],
-                    image: keychainImage
+                    "id": "experience-3",
+                    "title": "풍선다트",
+                    "details": "조준하고 던져보세요! 톡톡 터지는 재미!",
+                    "items": [
+                        "풍선다트"
+                    ],
+                    "itemLabel": "체험 항목",
+                    "image": balloonDartsImage
                 },
                 {
-                    id: "plantpot",
-                    title: "화분",
-                    details: "힐링, 화분 한 개로 시작!",
-                    items: ["화분"],
-                    image: plantpotImage
+                    "id": "experience-4",
+                    "title": "돌려돌려돌림판",
+                    "details": "돌림판을 돌리고 옛날과자를 만나보세요!",
+                    "items": [
+                        "룰렛",
+                        "옛날과자"
+                    ],
+                    "itemLabel": "체험 항목",
+                    "image": rouletteImage
                 },
                 {
-                    id: "vintage-daiso",
-                    title: "빈티지다이쏘(구제샵)",
-                    details: "득템의 재미! 다양한 구제 아이템을 만나보세요.",
-                    items: ["구제 의류", "빈티지 잡화"],
-                    image: clothesImage
+                    "id": "experience-5",
+                    "title": "페이스페인팅",
+                    "details": "얼굴 위에 피어나는 알록달록한 그림!",
+                    "items": [
+                        "페이스페인팅"
+                    ],
+                    "itemLabel": "체험 항목",
+                    "image": facePaintingImage
                 },
+                {
+                    "id": "experience-6",
+                    "title": "고구마캐기체험",
+                    "details": "흙 속에 숨어 있는 고구마를 찾아보세요!",
+                    "items": [
+                        "고구마캐기체험"
+                    ],
+                    "itemLabel": "체험 항목",
+                    "image": sweetPotatoImage
+                }
             ]
         }
     };
@@ -237,7 +280,7 @@ function Booth() {
             {/* 메인 콘텐츠 */}
             <div className="booth-content">
                 <div className="booth-text">
-                    <h2 className="noto-sans-kr-bold">제 5차 에셀 마켓 부스</h2>
+                    <h2 className="noto-sans-kr-bold">제6회 에셀마켓 부스목록</h2>
                     <p className="payment-notice noto-sans-kr-semi-bold">모든 부스에서는 계좌이체 또는 현금으로<br />결제하실 수 있습니다! (카드 결제 불가)</p>
                     
                     {Object.entries(boothData).map(([categoryKey, category]) => (
@@ -274,7 +317,7 @@ function Booth() {
                                             <div className="booth-details">{booth.details}</div>
                                             {booth.items && booth.items.length > 0 && booth.items.some(item => item.trim() !== '') && (
                                                 <div className="booth-items">
-                                                    <h4>판매 항목</h4>
+                                                    <h4>{booth.itemLabel}</h4>
                                                     <ul>
                                                         {booth.items
                                                             .filter(item => item.trim() !== '')
